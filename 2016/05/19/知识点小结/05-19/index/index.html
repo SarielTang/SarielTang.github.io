@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>系统返回手势与ScrollView的冲突 | SarielTang的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="情景项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：
+由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
+原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统返回手势与ScrollView的冲突">
+<meta property="og:url" content="http://yoursite.com/2016/05/19/知识点小结/05-19/index/index.html">
+<meta property="og:site_name" content="SarielTang的个人博客">
+<meta property="og:description" content="情景项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：
+由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
+原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作">
+<meta property="og:image" content="http://yoursite.com/1.png">
+<meta property="og:updated_time" content="2016-10-26T08:57:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="系统返回手势与ScrollView的冲突">
+<meta name="twitter:description" content="情景项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：
+由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
+原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作">
+<meta name="twitter:image" content="http://yoursite.com/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="SarielTang的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SarielTang的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">没啥好说的，就是一些闲来无事的技术分享</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-知识点小结/05-19/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/19/知识点小结/05-19/index/" class="article-date">
+  <time datetime="2016-05-19T06:41:58.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      系统返回手势与ScrollView的冲突
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+		<div id="toc" class="toc-article">
+		<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#情景"><span class="toc-number">1.</span> <span class="toc-text">情景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原因"><span class="toc-number">2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决"><span class="toc-number">3.</span> <span class="toc-text">解决</span></a></li></ol>
+		</div>
+		
+        <h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：</p>
+<p><img src="1.png" alt=""><br>由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作用。UIScrollView的滑动手势也是UIPanGestureRecognizer。<br>由于scrollView的滑动手势拦截了事件，所以系统的滑动返回手势就不会再被触发。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>根据上面的原因，我们需要响应系统的手势，那么我们有两个思路，一个思路是中断ScrollView的其实是一个UIPanGestureRecognizer手势，以便响应系统的手势，另一个是让ScrollView不阻拦系统的手势。<br>第一个思路的实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event     &#123;</div><div class="line">	if (在ScrollViewd最左边，且当前是向右滑动) &#123;//伪代码</div><div class="line">		return nil;</div><div class="line">	&#125; else &#123;</div><div class="line">		return [super hitTest:point withEvent:event];</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种，通过代理，让两种手势共存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer  </div><div class="line"></div><div class="line">&#123;  </div><div class="line">	// 首先判断otherGestureRecognizer是不是系统pop手势  </div><div class="line">	if ([otherGestureRecognizer.view isKindOfClass:NSClassFromString(@&quot;UILayoutContainerView&quot;)]) &#123;  </div><div class="line">		// 再判断系统手势的state是began还是fail，同时判断scrollView的位置是不是正好在最左边  </div><div class="line">		if (otherGestureRecognizer.state == UIGestureRecognizerStateBegan </div><div class="line">            &amp;&amp; self.contentOffset.x == 0) &#123;  </div><div class="line">			return YES;  </div><div class="line">    	&#125;  </div><div class="line">	&#125;  </div><div class="line">	return NO;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/19/知识点小结/05-19/index/" data-id="ciuqouxvq0004kyfyev3n09uh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          个人博客目录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/18/知识点小结/05-18/index/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS字符串常量的使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/26/一些个人见解/index/">一些个人见解</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/底层原理分析/index/">底层原理分析</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/面试题总结/index/">面试题总结</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">个人博客目录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/知识点小结/05-19/index/">系统返回手势与ScrollView的冲突</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 SarielTang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
