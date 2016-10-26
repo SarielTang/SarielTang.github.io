@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>SarielTang&#39;s Blog</title>
+  <title>iOS性能调优总结 | SarielTang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="苦逼的程序员需要蜕变！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SarielTang's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x8BF4;&amp;#x8D77;&amp;#x6027;&amp;#x80FD;&amp;#x8C03;&amp;#x4F18;&amp;#xFF0C;&amp;#x6211;&amp;#x672C;&amp;#x6765;&amp;#x60F3;&amp;#x8BF4;&amp;#x5F88;&amp;#x591A;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x89C9;&amp;#x5F97;&amp;#x67AF;&amp;#x71E5;&amp;#x7684;&amp;#x8BED;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS性能调优总结">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/iOS性能调优总结/index.html">
 <meta property="og:site_name" content="SarielTang's Blog">
-<meta property="og:description" content="苦逼的程序员需要蜕变！">
+<meta property="og:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x8BF4;&amp;#x8D77;&amp;#x6027;&amp;#x80FD;&amp;#x8C03;&amp;#x4F18;&amp;#xFF0C;&amp;#x6211;&amp;#x672C;&amp;#x6765;&amp;#x60F3;&amp;#x8BF4;&amp;#x5F88;&amp;#x591A;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x89C9;&amp;#x5F97;&amp;#x67AF;&amp;#x71E5;&amp;#x7684;&amp;#x8BED;">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/031751256607234.png">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/031752482381475.png">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/031758150207474.png">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/031800579106209.png">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/091904535115222.jpg">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/091917051361438.png">
+<meta property="og:image" content="http://images.cnitblog.com/blog2015/693632/201503/091908274024566.jpg">
+<meta property="og:image" content="http://img.blog.csdn.net/20130819170332968?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3p6dmljdG9yeQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2016-05-18T09:28:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SarielTang's Blog">
-<meta name="twitter:description" content="苦逼的程序员需要蜕变！">
+<meta name="twitter:title" content="iOS性能调优总结">
+<meta name="twitter:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x8BF4;&amp;#x8D77;&amp;#x6027;&amp;#x80FD;&amp;#x8C03;&amp;#x4F18;&amp;#xFF0C;&amp;#x6211;&amp;#x672C;&amp;#x6765;&amp;#x60F3;&amp;#x8BF4;&amp;#x5F88;&amp;#x591A;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x89C9;&amp;#x5F97;&amp;#x67AF;&amp;#x71E5;&amp;#x7684;&amp;#x8BED;">
+<meta name="twitter:image" content="http://images.cnitblog.com/blog2015/693632/201503/031751256607234.png">
   
     <link rel="alternative" href="/atom.xml" title="SarielTang&#39;s Blog" type="application/atom+xml">
   
@@ -30,13 +40,8 @@
   
   <link rel="stylesheet" href="/css/style.css">
   
-      <style> .article { opacity: 0;} </style>
-  
   <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
   
   
       <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -47,8 +52,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -247,133 +252,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-系统返回手势和UIScrollView的冲突" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/19/系统返回手势和UIScrollView的冲突/" class="article-date">
-      <time datetime="2016-05-19T11:32:57.000Z" itemprop="datePublished">2016-05-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/19/系统返回手势和UIScrollView的冲突/">系统返回手势和UIScrollView的冲突</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x4E0E;ScrollView&#x7684;&#x51B2;&#x7A81;"><a href="#&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x4E0E;ScrollView&#x7684;&#x51B2;&#x7A81;" class="headerlink" title="&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x4E0E;ScrollView&#x7684;&#x51B2;&#x7A81;"></a>&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x4E0E;ScrollView&#x7684;&#x51B2;&#x7A81;</h1><h2 id="&#x60C5;&#x666F;"><a href="#&#x60C5;&#x666F;" class="headerlink" title="&#x60C5;&#x666F;"></a>&#x60C5;&#x666F;</h2><p>&#x9879;&#x76EE;&#x4E2D;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x4E2D;&#x662F;&#x4EE5;&#x4E00;&#x4E2A;scrollview&#x6A2A;&#x5411;Tab&#x5C55;&#x793A;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x529F;&#x80FD;&#x7684;&#x663E;&#x793A;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;<br><img src="/2016/05/19/&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x548C;UIScrollView&#x7684;&#x51B2;&#x7A81;/Snip20160519_4.png" alt="&#x793A;&#x4F8B;&#x56FE;1"><br>&#x7531;&#x4E8E;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x548C;scrollview&#x7684;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x4E0D;&#x518D;&#x80FD;&#x591F;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x3002;&#x7C7B;&#x4F3C;&#x7684;&#x8FD8;&#x6709;&#x56FE;&#x7247;&#x6D4F;&#x89C8;&#x529F;&#x80FD;&#x4E5F;&#x51FA;&#x73B0;&#x8FC7;&#x3002;</p>
-<h2 id="&#x539F;&#x56E0;"><a href="#&#x539F;&#x56E0;" class="headerlink" title="&#x539F;&#x56E0;"></a>&#x539F;&#x56E0;</h2><p>iOS&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;UIPanGestureRecognizer&#xFF0C;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x53EA;&#x6709;&#x6ED1;&#x52A8;&#x5C4F;&#x5E55;&#x7684;&#x5DE6;&#x8FB9;&#x7684;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;<br>UIPanGestureRecognizer&#x624D;&#x4F1A;&#x8D77;&#x4F5C;&#x7528;&#x3002;UIScrollView&#x7684;&#x6ED1;&#x52A8;&#x624B;&#x52BF;&#x4E5F;&#x662F;UIPanGestureRecognizer&#x3002;<br>&#x7531;&#x4E8E;scrollView&#x7684;&#x6ED1;&#x52A8;&#x624B;&#x52BF;&#x62E6;&#x622A;&#x4E86;&#x4E8B;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x7CFB;&#x7EDF;&#x7684;&#x6ED1;&#x52A8;&#x8FD4;&#x56DE;&#x624B;&#x52BF;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x88AB;&#x89E6;&#x53D1;&#x3002;</p>
-<h2 id="&#x89E3;&#x51B3;"><a href="#&#x89E3;&#x51B3;" class="headerlink" title="&#x89E3;&#x51B3;"></a>&#x89E3;&#x51B3;</h2><p>&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x54CD;&#x5E94;&#x7CFB;&#x7EDF;&#x7684;&#x624B;&#x52BF;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x6709;&#x4E24;&#x4E2A;&#x601D;&#x8DEF;&#xFF0C;&#x4E00;&#x4E2A;&#x601D;&#x8DEF;&#x662F;&#x4E2D;&#x65AD;ScrollView&#x7684;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;UIPanGestureRecognizer<br>&#x624B;&#x52BF;&#xFF0C;&#x4EE5;&#x4FBF;&#x54CD;&#x5E94;&#x7CFB;&#x7EDF;&#x7684;&#x624B;&#x52BF;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x8BA9;ScrollView&#x4E0D;&#x963B;&#x62E6;&#x7CFB;&#x7EDF;&#x7684;&#x624B;&#x52BF;&#x3002;<br>&#x7B2C;&#x4E00;&#x4E2A;&#x601D;&#x8DEF;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event     {</span><br><span class="line">if (&#x5728;ScrollViewd&#x6700;&#x5DE6;&#x8FB9;&#xFF0C;&#x4E14;&#x5F53;&#x524D;&#x662F;&#x5411;&#x53F3;&#x6ED1;&#x52A8;) {//&#x4F2A;&#x4EE3;&#x7801;</span><br><span class="line">return nil;</span><br><span class="line">} else {</span><br><span class="line">return [super hitTest:point withEvent:event];</span><br><span class="line">}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
-<p>&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#xFF0C;&#x8BA9;&#x4E24;&#x79CD;&#x624B;&#x52BF;&#x5171;&#x5B58;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer  </span><br><span class="line">{  </span><br><span class="line">// &#x9996;&#x5148;&#x5224;&#x65AD;otherGestureRecognizer&#x662F;&#x4E0D;&#x662F;&#x7CFB;&#x7EDF;pop&#x624B;&#x52BF;  </span><br><span class="line">if ([otherGestureRecognizer.view isKindOfClass:NSClassFromString(@&quot;UILayoutContainerView&quot;)]) {  </span><br><span class="line">// &#x518D;&#x5224;&#x65AD;&#x7CFB;&#x7EDF;&#x624B;&#x52BF;&#x7684;state&#x662F;began&#x8FD8;&#x662F;fail&#xFF0C;&#x540C;&#x65F6;&#x5224;&#x65AD;scrollView&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x4E0D;&#x662F;&#x6B63;&#x597D;&#x5728;&#x6700;&#x5DE6;&#x8FB9;  </span><br><span class="line">if (otherGestureRecognizer.state == UIGestureRecognizerStateBegan &amp;&amp; self.contentOffset.x == 0) {  </span><br><span class="line">return YES;  </span><br><span class="line">}  </span><br><span class="line">}  </span><br><span class="line"></span><br><span class="line">return NO;  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-iOS字符串常量的使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/18/iOS字符串常量的使用/" class="article-date">
-      <time datetime="2016-05-18T08:45:16.000Z" itemprop="datePublished">2016-05-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/18/iOS字符串常量的使用/">iOS字符串常量的使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="&#x5F15;&#x8A00;"><a href="#&#x5F15;&#x8A00;" class="headerlink" title="&#x5F15;&#x8A00;"></a>&#x5F15;&#x8A00;</h2><p>&#x5728;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define RKLICURegexEnumerationOptionsErrorKey @&quot;RKLICURegexEnumerationOptionsErrorKey&quot;</span><br><span class="line">extern NSString * const RKLICURegexEnumerationOptionsErrorKey;</span><br></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x5B70;&#x4F18;&#x5B70;&#x52A3;&#xFF1F;&#x6216;&#x8005;&#x5728;&#x54EA;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x8BE5;&#x7528;&#x90A3;&#x79CD;&#x5199;&#x6CD5;&#xFF1F;</p>
-<h2 id="1&#x3001;-define"><a href="#1&#x3001;-define" class="headerlink" title="1&#x3001;#define"></a>1&#x3001;#define</h2><p>&#x901A;&#x8FC7;&#x5B8F;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x8BA4;&#x4E3A;&#x662F;&#x8FDB;&#x884C;&#x4E86;&#x66FF;&#x6362;&#x6389;&#x52A8;&#x4F5C;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;</p>
-<pre><code>@&quot;&quot;&#x5199;&#x6CD5;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F1A;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x88AB;&#x66FF;&#x6362;&#x6210;NSConstantString&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;NSString&#x4E5F;&#x662F;&#x552F;&#x4E00;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x7C7B;&#x3002;
-</code></pre><p>&#x6240;&#x4EE5;&#xFF0C;&#x4F7F;&#x7528;#define(&#x76F8;&#x5F53;&#x4E8E;&#x4F7F;&#x7528;@&#x201D;&#x201D;&#x5199;&#x6CD5;&#x7684;&#x201C;&#x5B57;&#x9762;&#x91CF;&#x201D;)&#x4E0D;&#x80FD;&#x5728;shared libraries&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4FDD;&#x8BC1;&#x5F97;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5730;&#x5740;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x5728;shared libraries&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; &#x5982;&#x679C;&#x7528;@&#x201D;&#x201D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;dictionary&#x7684;key&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5B83;&#x9700;&#x8981;&#x505A;isEqualToString&#x7684;&#x6BD4;&#x8F83;&#xFF0C;&#x5982;&#x679C;&#x7528;extern NSString * const&#xFF0C;&#x53EA;&#x8981;&#x505A;&#x6307;&#x9488;&#x7684;&#x6BD4;&#x8F83;&#x3002;&#x663E;&#x7136;&#x6307;&#x9488;&#x6BD4;&#x8F83;&#x6BD4;&#x9010;&#x4E2A;&#x5B57;&#x7B26;&#x6BD4;&#x8F83;&#x5FEB;&#x591A;&#x4E86;&#x3002;</p>
-<h2 id="2&#x3001;extern-NSString-const"><a href="#2&#x3001;extern-NSString-const" class="headerlink" title="2&#x3001;extern NSString * const"></a>2&#x3001;extern NSString * const</h2><h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const&#x6700;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x4FEE;&#x9970;&#x7684;&#x4E1C;&#x897F;&#x4E0D;&#x80FD;&#x88AB;&#x4FEE;&#x6539;<br>&#x6307;&#x9488;&#x7C7B;&#x578B;&#x6839;&#x636E;&#x4F4D;&#x7F6E;&#x7684;&#x4E0D;&#x540C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;3&#x79CD;&#x60C5;&#x51B5;:</p>
-<h4 id="I-&#x5E38;&#x91CF;&#x6307;&#x9488;"><a href="#I-&#x5E38;&#x91CF;&#x6307;&#x9488;" class="headerlink" title="I.&#x5E38;&#x91CF;&#x6307;&#x9488;"></a>I.&#x5E38;&#x91CF;&#x6307;&#x9488;</h4><p>// &#x521D;&#x59CB;&#x5316;&#x4E4B;&#x540E;&#x4E0D;&#x80FD;&#x8D4B;&#x503C;&#xFF0C;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x53EF;&#x53D8;&#x3002;<br>NSString * const pt1;</p>
-<h4 id="II-&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x6307;&#x9488;"><a href="#II-&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x6307;&#x9488;" class="headerlink" title="II.&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x6307;&#x9488;"></a>II.&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x6307;&#x9488;</h4><p>// &#x521D;&#x59CB;&#x5316;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#xFF0C;&#x5373;&#x6307;&#x5411;&#x522B;&#x7684;&#x5E38;&#x91CF;&#xFF0C;&#x6307;&#x9488;&#x672C;&#x8EAB;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#xFF0C;&#x6307;&#x5411;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;<br>const NSString * pt2;</p>
-<h4 id="III-&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x5E38;&#x91CF;&#x6307;&#x9488;"><a href="#III-&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x5E38;&#x91CF;&#x6307;&#x9488;" class="headerlink" title="III.&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x5E38;&#x91CF;&#x6307;&#x9488;"></a>III.&#x6307;&#x5411;&#x5E38;&#x91CF;&#x7684;&#x5E38;&#x91CF;&#x6307;&#x9488;</h4><p>const NSString *  const pt3;</p>
-<h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p>&#x7B49;&#x540C;&#x4E8E;c&#xFF0C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;<br>// .h &#x58F0;&#x660E;<br>extern const NSString * AA;</p>
-<p>// .m &#x5B9A;&#x4E49;<br>const NSString * AA = @&#x201D;abc&#x201D;;</p>
-<p>// &#x8C03;&#x7528;<br>&#x901A;&#x8FC7;&#xFF03;import &#x201C; .h&#x201D;&#x5F15;&#x7528;<br>&#x6216;&#x8005;&#x518D;&#x6B21;&#x7533;&#x660E;<br>extern const NSString * AA;</p>
-<h2 id="&#x7ED3;&#x8BBA;"><a href="#&#x7ED3;&#x8BBA;" class="headerlink" title="&#x7ED3;&#x8BBA;"></a>&#x7ED3;&#x8BBA;</h2><p>&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;&#xFF0C;&#x5728;iOS&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x51FA;&#x73B0;&#x901A;&#x8FC7;&#x9759;&#x6001;&#x5E93;&#x4E4B;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#x5728;&#x8C03;&#x7528;&#x5E38;&#x91CF;&#x5B57;&#x7B26;&#x4E32;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x901A;&#x8FC7;extern NSString &#xFF0A;const&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x6211;&#x4EEC;&#x7684;&#x5E38;&#x91CF;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-iOS性能调优总结" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-iOS性能调优总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/05/18/iOS性能调优总结/" class="article-date">
@@ -389,12 +268,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/18/iOS性能调优总结/">iOS性能调优总结</a>
+    <h1 class="article-title" itemprop="name">
+      iOS性能调优总结
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -571,19 +457,105 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/05/18/iOS性能调优总结/">iOS性能调优总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Sariel Tang</a></p>
+        <p><span>发布时间:</span>2016-05-18, 15:20:13</p>
+        <p><span>最后更新:</span>2016-05-18, 17:28:26</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/05/18/iOS性能调优总结/" title="iOS性能调优总结">http://yoursite.com/2016/05/18/iOS性能调优总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/18/iOS性能调优总结/　　作者: Sariel Tang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/05/18/iOS字符串常量的使用/">
+                    iOS字符串常量的使用
+                </a>
+            </div>
+        
+        
+    </nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能调优的方式："><span class="toc-number">2.</span> <span class="toc-text">性能调优的方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-性能调优工具："><span class="toc-number">3.</span> <span class="toc-text">1. 性能调优工具：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-静态分析工具–Analyze"><span class="toc-number">3.1.</span> <span class="toc-text">1.1 静态分析工具–Analyze</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-内存泄漏分析工具–Leaks"><span class="toc-number">3.2.</span> <span class="toc-text">1.2 内存泄漏分析工具–Leaks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内存泄漏动态分析技巧"><span class="toc-number">3.2.1.</span> <span class="toc-text">内存泄漏动态分析技巧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开启ARC后，内存泄漏的原因"><span class="toc-number">3.2.2.</span> <span class="toc-text">开启ARC后，内存泄漏的原因</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-不合理内存分析工具–Allocation"><span class="toc-number">3.3.</span> <span class="toc-text">1.3 不合理内存分析工具–Allocation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-干掉僵尸对象–Zombies"><span class="toc-number">3.4.</span> <span class="toc-text">1.4 干掉僵尸对象–Zombies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-性能提升工具–Time-Profile"><span class="toc-number">3.5.</span> <span class="toc-text">1.5 性能提升工具–Time Profile</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Time-Profiler参数设置"><span class="toc-number">3.5.1.</span> <span class="toc-text">Time Profiler参数设置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-性能调优的代码优化："><span class="toc-number">4.</span> <span class="toc-text">2. 性能调优的代码优化：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-不要阻塞主线程"><span class="toc-number">4.1.</span> <span class="toc-text">2.2 不要阻塞主线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-提前调整ImageView中的图片大小（同图片和动画的渲染）"><span class="toc-number">4.2.</span> <span class="toc-text">2.3 提前调整ImageView中的图片大小（同图片和动画的渲染）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-正确使用容器的特性"><span class="toc-number">4.3.</span> <span class="toc-text">2.4 正确使用容器的特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-大文件传输使用gzip"><span class="toc-number">4.4.</span> <span class="toc-text">2.5 大文件传输使用gzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-View的重用和懒加载"><span class="toc-number">4.5.</span> <span class="toc-text">2.6 View的重用和懒加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-Cache"><span class="toc-number">4.6.</span> <span class="toc-text">2.7 Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-记得处理内存警告"><span class="toc-number">4.7.</span> <span class="toc-text">2.8 记得处理内存警告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-重用大的开销对象"><span class="toc-number">4.8.</span> <span class="toc-text">2.9 重用大的开销对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-10-避免反复的处理数据"><span class="toc-number">4.9.</span> <span class="toc-text">2.10 避免反复的处理数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-11-正确设定背景图片"><span class="toc-number">4.10.</span> <span class="toc-text">2.11 正确设定背景图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-12-试试苹果最新的WKWebView来处理web"><span class="toc-number">4.11.</span> <span class="toc-text">2.12 试试苹果最新的WKWebView来处理web</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-13-优化你的TableView"><span class="toc-number">4.12.</span> <span class="toc-text">2.13 优化你的TableView</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-14-选择正确的数据存储方式"><span class="toc-number">4.13.</span> <span class="toc-text">2.14 选择正确的数据存储方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-15-把Xib换成Storyboard吧"><span class="toc-number">4.14.</span> <span class="toc-text">2.15 把Xib换成Storyboard吧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-16-学会手动创建Autorelease-Pool"><span class="toc-number">4.15.</span> <span class="toc-text">2.16 学会手动创建Autorelease Pool</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"iOS性能调优总结　| SarielTang's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -591,9 +563,33 @@
 
 
 
+    
 
-  
-  
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/05/18/iOS字符串常量的使用/" title="上一篇: iOS字符串常量的使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/19/系统返回手势和UIScrollView的冲突/">系统返回手势和UIScrollView的冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/iOS字符串常量的使用/">iOS字符串常量的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/iOS性能调优总结/">iOS性能调优总结</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
