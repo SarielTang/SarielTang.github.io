@@ -3,36 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>SarielTang的个人博客</title>
+  <title>iOS字符串常量的使用 | SarielTang的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: iOS字符串常量的使用
-date: 2016-5-18 14:41:58
-引言在使用常量字符串的时候，主要有两种写法：
+  <meta name="description" content="引言在使用常量字符串的时候，主要有两种写法：
 
 define RKLICURegexEnumerationOptionsErrorKey @”RKLICURegexEnumerationOptionsErrorKey”
 
-extern NSString * const RKLICURegexEnumeratio">
+extern NSString * const RKLICURegexEnumerationOptionsErrorKey;
+这两种写法孰优孰劣？或者在哪些情况下该用那种写法？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SarielTang的个人博客">
-<meta property="og:url" content="http://yoursite.com/2016/10/26/知识点小结/05-18/index/index.html">
+<meta property="og:title" content="iOS字符串常量的使用">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/知识点小结/05-18/index/index.html">
 <meta property="og:site_name" content="SarielTang的个人博客">
-<meta property="og:description" content="title: iOS字符串常量的使用
-date: 2016-5-18 14:41:58
-引言在使用常量字符串的时候，主要有两种写法：
+<meta property="og:description" content="引言在使用常量字符串的时候，主要有两种写法：
 
 define RKLICURegexEnumerationOptionsErrorKey @”RKLICURegexEnumerationOptionsErrorKey”
 
-extern NSString * const RKLICURegexEnumeratio">
-<meta property="og:updated_time" content="2016-10-26T07:13:00.000Z">
+extern NSString * const RKLICURegexEnumerationOptionsErrorKey;
+这两种写法孰优孰劣？或者在哪些情况下该用那种写法？">
+<meta property="og:updated_time" content="2016-10-26T07:37:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SarielTang的个人博客">
-<meta name="twitter:description" content="title: iOS字符串常量的使用
-date: 2016-5-18 14:41:58
-引言在使用常量字符串的时候，主要有两种写法：
+<meta name="twitter:title" content="iOS字符串常量的使用">
+<meta name="twitter:description" content="引言在使用常量字符串的时候，主要有两种写法：
 
 define RKLICURegexEnumerationOptionsErrorKey @”RKLICURegexEnumerationOptionsErrorKey”
 
-extern NSString * const RKLICURegexEnumeratio">
+extern NSString * const RKLICURegexEnumerationOptionsErrorKey;
+这两种写法孰优孰劣？或者在哪些情况下该用那种写法？">
   
     <link rel="alternate" href="/atom.xml" title="SarielTang的个人博客" type="application/atom+xml">
   
@@ -87,21 +84,34 @@ extern NSString * const RKLICURegexEnumeratio">
       <div class="outer">
         <section id="main"><article id="post-知识点小结/05-18/index" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/26/知识点小结/05-18/index/" class="article-date">
-  <time datetime="2016-10-26T06:41:58.000Z" itemprop="datePublished">2016-10-26</time>
+    <a href="/2016/05/18/知识点小结/05-18/index/" class="article-date">
+  <time datetime="2016-05-18T06:41:58.000Z" itemprop="datePublished">2016-05-18</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS字符串常量的使用
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
       	<!-- Table of Contents -->
 		
-        <p>title: iOS字符串常量的使用</p>
-<p>date: 2016-5-18 14:41:58</p>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在使用常量字符串的时候，主要有两种写法：</p>
+		<div id="toc" class="toc-article">
+		<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、-define"><span class="toc-number">1.1.</span> <span class="toc-text">1、#define</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、extern-NSString-const"><span class="toc-number">1.2.</span> <span class="toc-text">2、extern NSString * const</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#const"><span class="toc-number">1.2.1.</span> <span class="toc-text">const</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#extern"><span class="toc-number">1.2.2.</span> <span class="toc-text">extern</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结论"><span class="toc-number">2.</span> <span class="toc-text">结论</span></a></li></ol>
+		</div>
+		
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在使用常量字符串的时候，主要有两种写法：</p>
 <ol>
 <li><p>define RKLICURegexEnumerationOptionsErrorKey @”RKLICURegexEnumerationOptionsErrorKey”</p>
 </li>
@@ -141,7 +151,7 @@ extern NSString * const RKLICURegexEnumeratio">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/26/知识点小结/05-18/index/" data-id="ciuqlsdao0004ggfyp81ga3qw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/18/知识点小结/05-18/index/" data-id="ciuqlz6in0004jffyhzf9zfvq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -150,20 +160,15 @@ extern NSString * const RKLICURegexEnumeratio">
     
 <nav id="article-nav">
   
-    <a href="/2016/10/26/一些个人见解/index/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          一些个人见解
+          个人博客目录
         
       </div>
     </a>
   
-  
-    <a href="/2016/10/26/底层原理分析/index/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">底层原理分析</div>
-    </a>
   
 </nav>
 
@@ -186,7 +191,7 @@ extern NSString * const RKLICURegexEnumeratio">
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li></ul>
     </div>
   </div>
 
@@ -203,10 +208,6 @@ extern NSString * const RKLICURegexEnumeratio">
           </li>
         
           <li>
-            <a href="/2016/10/26/知识点小结/05-18/index/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2016/10/26/底层原理分析/index/">底层原理分析</a>
           </li>
         
@@ -216,6 +217,10 @@ extern NSString * const RKLICURegexEnumeratio">
         
           <li>
             <a href="/2016/10/26/hello-world/">个人博客目录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/18/知识点小结/05-18/index/">iOS字符串常量的使用</a>
           </li>
         
       </ul>
