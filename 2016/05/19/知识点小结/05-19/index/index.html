@@ -6,23 +6,21 @@
   <title>系统返回手势与ScrollView的冲突 | SarielTang的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="情景项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：
-由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
-原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作">
+示例图由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
+原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才">
 <meta property="og:type" content="article">
 <meta property="og:title" content="系统返回手势与ScrollView的冲突">
 <meta property="og:url" content="http://yoursite.com/2016/05/19/知识点小结/05-19/index/index.html">
 <meta property="og:site_name" content="SarielTang的个人博客">
 <meta property="og:description" content="情景项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：
-由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
-原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作">
-<meta property="og:image" content="http://yoursite.com/1.png">
-<meta property="og:updated_time" content="2016-10-26T08:57:47.000Z">
+示例图由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
+原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才">
+<meta property="og:updated_time" content="2016-10-26T09:04:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统返回手势与ScrollView的冲突">
 <meta name="twitter:description" content="情景项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：
-由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
-原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作">
-<meta name="twitter:image" content="http://yoursite.com/1.png">
+示例图由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。
+原因iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才">
   
     <link rel="alternate" href="/atom.xml" title="SarielTang的个人博客" type="application/atom+xml">
   
@@ -105,7 +103,7 @@
 		</div>
 		
         <h2 id="情景"><a href="#情景" class="headerlink" title="情景"></a>情景</h2><p>项目中遇到一个页面中是以一个scrollview横向Tab展示两个不同功能的显示，如图：</p>
-<p><img src="1.png" alt=""><br>由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。</p>
+<p><a href="/img/05-19-1.png">示例图</a><br>由于滑动返回手势和scrollview的滑动返回手势冲突了，导致页面不再能够滑动返回。类似的还有图片浏览功能也出现过。</p>
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>iOS系统中，滑动返回手势，其实是一个UIPanGestureRecognizer，系统默认的操作是只有滑动屏幕的左边的某个位置，UIPanGestureRecognizer才会起作用。UIScrollView的滑动手势也是UIPanGestureRecognizer。<br>由于scrollView的滑动手势拦截了事件，所以系统的滑动返回手势就不会再被触发。</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>根据上面的原因，我们需要响应系统的手势，那么我们有两个思路，一个思路是中断ScrollView的其实是一个UIPanGestureRecognizer手势，以便响应系统的手势，另一个是让ScrollView不阻拦系统的手势。<br>第一个思路的实现：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event     &#123;</div><div class="line">	if (在ScrollViewd最左边，且当前是向右滑动) &#123;//伪代码</div><div class="line">		return nil;</div><div class="line">	&#125; else &#123;</div><div class="line">		return [super hitTest:point withEvent:event];</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -115,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/19/知识点小结/05-19/index/" data-id="ciuqoxkqv0004ntfyzzpevpwf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/19/知识点小结/05-19/index/" data-id="ciuqp436l0004qcfy4ir41l59" class="article-share-link">Share</a>
       
       
     </footer>
