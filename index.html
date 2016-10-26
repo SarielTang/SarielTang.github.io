@@ -65,6 +65,178 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-一些个人见解/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/26/一些个人见解/index/" class="article-date">
+  <time datetime="2016-10-26T06:41:58.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/一些个人见解/index/">一些个人见解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/26/一些个人见解/index/" data-id="ciuqlhtsi0001bjfy2w84t6nh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-知识点小结/05-18/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/26/知识点小结/05-18/index/" class="article-date">
+  <time datetime="2016-10-26T06:41:58.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: iOS字符串常量的使用</p>
+<p>date: 2016-5-18 14:41:58</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在使用常量字符串的时候，主要有两种写法：</p>
+<ol>
+<li><p>define RKLICURegexEnumerationOptionsErrorKey @”RKLICURegexEnumerationOptionsErrorKey”</p>
+</li>
+<li><p>extern NSString * const RKLICURegexEnumerationOptionsErrorKey;</p>
+<p>这两种写法孰优孰劣？或者在哪些情况下该用那种写法？</p>
+</li>
+</ol>
+<h3 id="1、-define"><a href="#1、-define" class="headerlink" title="1、#define"></a>1、#define</h3><p>通过宏定义的方式定义的字符串常量，我们通常会认为是进行了替换掉动作。但是，实际上，<code>@&quot;&quot;</code>写法的字符串会在编译期被替换成NSConstantString的实例，NSString也是唯一一种可以在编译期被实例化的类。</p>
+<p>所以，使用#define(相当于使用<code>@””</code>写法的“字面量”)不能在shared libraries的情况下保证得到的字符串地址是一样的。所以在shared libraries的情况下， 如果用<code>@””</code>的字符串作为dictionary的key的话，会导致它需要做isEqualToString的比较，如果用extern NSString * const，只要做指针的比较。显然指针比较比逐个字符比较快多了。</p>
+<h3 id="2、extern-NSString-const"><a href="#2、extern-NSString-const" class="headerlink" title="2、extern NSString * const"></a>2、extern NSString * const</h3><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><p>const最好理解，修饰的东西不能被修改<br>指针类型根据位置的不同可以理解成3种情况:</p>
+<ol>
+<li><p>常量指针</p>
+<p>// 初始化之后不能赋值，指向的对象可以是任意对象，对象可变。</p>
+<p><code>NSString * const pt1;</code></p>
+</li>
+<li><p>指向常量的指针</p>
+<p>// 初始化之后可以赋值，即指向别的常量，指针本身的值可以修改，指向的值不能修改<br><code>const NSString * pt2;</code></p>
+</li>
+<li><p>指向常量的常量指针</p>
+<p><code>const NSString * const pt3;</code></p>
+</li>
+</ol>
+<h4 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h4><p>等同于c，全局变量的定义，</p>
+<ol>
+<li><p>// .h 声明</p>
+<p><code>extern const NSString * AA;</code></p>
+</li>
+<li><p>// .m 定义</p>
+<p><code>const NSString * AA = @”abc”;</code></p>
+</li>
+<li><p>// 调用</p>
+<p>通过＃import “ .h”引用<br>或者再次申明<br>extern const NSString * AA;</p>
+</li>
+</ol>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>根据上面的这些内容，我们可以简单下一个结论，在iOS开发中，为了防止出现通过静态库之类的方式在调用常量字符串出现的问题，我们可以简单的，通过extern NSString ＊const的方式来实现我们的常量字符串。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/26/知识点小结/05-18/index/" data-id="ciuqlhtt50004bjfynas7hrja" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-底层原理分析/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/26/底层原理分析/index/" class="article-date">
+  <time datetime="2016-10-26T06:41:44.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/底层原理分析/index/">底层原理分析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/26/底层原理分析/index/" data-id="ciuqlhtsl0002bjfy3uufskxb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面试题总结/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/26/面试题总结/index/" class="article-date">
+  <time datetime="2016-10-26T06:41:24.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/面试题总结/index/">面试题总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/26/面试题总结/index/" data-id="ciuqlhtso0003bjfykbhjrqr7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/10/26/hello-world/" class="article-date">
@@ -100,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/26/hello-world/" data-id="ciuqlgsgg0000b3fykqrnrcgi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/26/hello-world/" data-id="ciuqlhtri0000bjfyazkgwrff" class="article-share-link">Share</a>
       
       
     </footer>
@@ -138,6 +310,22 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/10/26/一些个人见解/index/">一些个人见解</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/知识点小结/05-18/index/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/底层原理分析/index/">底层原理分析</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/面试题总结/index/">面试题总结</a>
+          </li>
         
           <li>
             <a href="/2016/10/26/hello-world/">Hello World</a>
