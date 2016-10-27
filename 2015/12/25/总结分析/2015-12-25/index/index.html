@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="SarielTang的个人博客">
 <meta property="og:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x9274;&amp;#x4E8E;&amp;#x5F88;&amp;#x591A;&amp;#x5C0F;&amp;#x4F19;&amp;#x4F34;&amp;#x6700;&amp;#x8FD1;&amp;#x8001;&amp;#x662F;&amp;#x95EE;&amp;#x6211;&amp;#x5173;&amp;#x4E8E;js&amp;#x4E0E;OC&amp;#x4EA4;&amp;#x4E92;&amp;#x7684;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x5">
 <meta property="og:image" content="http://img.blog.csdn.net/20151224141959509">
-<meta property="og:updated_time" content="2016-10-27T04:13:13.000Z">
+<meta property="og:updated_time" content="2016-10-27T09:17:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OC与js的交互 - javascriptCore">
 <meta name="twitter:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x9274;&amp;#x4E8E;&amp;#x5F88;&amp;#x591A;&amp;#x5C0F;&amp;#x4F19;&amp;#x4F34;&amp;#x6700;&amp;#x8FD1;&amp;#x8001;&amp;#x662F;&amp;#x95EE;&amp;#x6211;&amp;#x5173;&amp;#x4E8E;js&amp;#x4E0E;OC&amp;#x4EA4;&amp;#x4E92;&amp;#x7684;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x5">
@@ -103,7 +103,8 @@
 		</div>
 		
         <h1 id="&#x5F15;&#x8A00;"><a href="#&#x5F15;&#x8A00;" class="headerlink" title="&#x5F15;&#x8A00;"></a>&#x5F15;&#x8A00;</h1><pre><code>&#x9274;&#x4E8E;&#x5F88;&#x591A;&#x5C0F;&#x4F19;&#x4F34;&#x6700;&#x8FD1;&#x8001;&#x662F;&#x95EE;&#x6211;&#x5173;&#x4E8E;js&#x4E0E;OC&#x4EA4;&#x4E92;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x539F;&#x672C;&#x6253;&#x7B97;&#x5148;&#x5199;&#x5B8C;CoreAnimation&#x7684;&#x6211;&#xFF0C;&#x51B3;&#x5B9A;&#x5148;&#x5427;&#x8FD9;&#x5757;&#x77E5;&#x8BC6;&#x70B9;&#x6574;&#x7406;&#x51FA;&#x6765;&#xFF0C;&#x6BD5;&#x7ADF;&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7684;&#x77E5;&#x8BC6;&#x7684;&#x786E;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x5BB9;&#x6613;&#x5199;&#x5B8C;&#x3002;
-</code></pre><p>#OC&#x4E0E;js&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;</p>
+</code></pre><a id="more"></a>
+<p>#OC&#x4E0E;js&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;</p>
 <p>OC&#x4E0E;js&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;&#x6709;&#x597D;&#x51E0;&#x79CD;&#xFF0C;&#x4E0D;&#x501F;&#x52A9;&#x7B2C;&#x4E09;&#x65B9;&#x6846;&#x67B6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x4E24;&#x4E2A;&#x9009;&#x62E9;&#xFF0C;webkit&#x548C;javascriptCore&#x3002;</p>
 <p>##&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;webkit&#x8FDB;&#x884C;OC&#x4E0E;js&#x7684;&#x4EA4;&#x4E92;<br>&#x6CA1;&#x8BA4;&#x8BC6;JavaScriptCore&#x4E4B;&#x524D;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728;OC&#x4E2D;&#x4F7F;&#x7528;JavaScript&#x4EE3;&#x7801;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x5728;webview&#xFF08;webview&#x5185;&#x7F6E;webkit&#x5F15;&#x64CE;&#xFF0C;&#x89E3;&#x6790;JavaScript&#x4EE3;&#x7801;&#xFF09;</p>
 <p>&#x4E3B;&#x8981;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x5728;webView&#x7684;&#x4EE3;&#x7406;&#x4E2D;&#x6267;&#x884C;:<br><code>stringByEvaluatingJavaScriptFromString:@&quot;JS&#x7684;&#x65B9;&#x6CD5;&#x540D;&quot;</code>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;,&#x5373;&#x53EF;&#x5728;webView&#x4E2D;&#x8C03;&#x7528;js&#x7684;&#x51FD;&#x6570;<br>&#x540C;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;<code>webView:shouldStartLoadWithRequest: navigationType:</code>&#x76D1;&#x542C;&#x7531;js&#x5728;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x4F3C;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5728;OC&#x4E2D;&#x6267;&#x884C;&#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;</p>
@@ -175,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/12/25/总结分析/2015-12-25/index/" data-id="cius4t20k0006f3fyf9iwyfuc" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/12/25/总结分析/2015-12-25/index/" data-id="cius50a030006ipfynfjoi6mp" class="article-share-link">Share</a>
       
       
     </footer>
