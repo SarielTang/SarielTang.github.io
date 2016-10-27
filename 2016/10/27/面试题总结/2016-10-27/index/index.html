@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS面试题整理分析 | SarielTang的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x4E4B;&amp;#x6240;&amp;#x4EE5;&amp;#x8981;&amp;#x6574;&amp;#x7406;&amp;#x8FD9;&amp;#x4EFD;&amp;#x9762;&amp;#x8BD5;&amp;#x9898;&amp;#xFF0C;&amp;#x4E5F;&amp;#x662F;&amp;#x5E0C;&amp;#x671B;&amp;#x80FD;&amp;#x5BF9;&amp;#x66F4;&amp;#x591A;&amp;#x7684;&amp;#x77E5;&amp;#x8BC6;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS面试题整理分析">
+<meta property="og:url" content="http://sarieltang.github.io/2016/10/27/面试题总结/2016-10-27/index/index.html">
+<meta property="og:site_name" content="SarielTang的个人博客">
+<meta property="og:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x4E4B;&amp;#x6240;&amp;#x4EE5;&amp;#x8981;&amp;#x6574;&amp;#x7406;&amp;#x8FD9;&amp;#x4EFD;&amp;#x9762;&amp;#x8BD5;&amp;#x9898;&amp;#xFF0C;&amp;#x4E5F;&amp;#x662F;&amp;#x5E0C;&amp;#x671B;&amp;#x80FD;&amp;#x5BF9;&amp;#x66F4;&amp;#x591A;&amp;#x7684;&amp;#x77E5;&amp;#x8BC6;">
+<meta property="og:updated_time" content="2016-10-27T08:50:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS面试题整理分析">
+<meta name="twitter:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x4E4B;&amp;#x6240;&amp;#x4EE5;&amp;#x8981;&amp;#x6574;&amp;#x7406;&amp;#x8FD9;&amp;#x4EFD;&amp;#x9762;&amp;#x8BD5;&amp;#x9898;&amp;#xFF0C;&amp;#x4E5F;&amp;#x662F;&amp;#x5E0C;&amp;#x671B;&amp;#x80FD;&amp;#x5BF9;&amp;#x66F4;&amp;#x591A;&amp;#x7684;&amp;#x77E5;&amp;#x8BC6;">
+  
+    <link rel="alternate" href="/atom.xml" title="SarielTang的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SarielTang的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">自己重新制作的个人博客，会随意分享一些东西，有兴趣的可以关注看看，愿世界没有加班，阿门。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://sarieltang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面试题总结/2016-10-27/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/27/面试题总结/2016-10-27/index/" class="article-date">
+  <time datetime="2016-10-27T08:12:00.000Z" itemprop="datePublished">2016-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/面试题总结/">面试题总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS面试题整理分析
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="&#x5F15;&#x8A00;"><a href="#&#x5F15;&#x8A00;" class="headerlink" title="&#x5F15;&#x8A00;"></a>&#x5F15;&#x8A00;</h2><p>&#x4E4B;&#x6240;&#x4EE5;&#x8981;&#x6574;&#x7406;&#x8FD9;&#x4EFD;&#x9762;&#x8BD5;&#x9898;&#xFF0C;&#x4E5F;&#x662F;&#x5E0C;&#x671B;&#x80FD;&#x5BF9;&#x66F4;&#x591A;&#x7684;&#x77E5;&#x8BC6;&#x8FDB;&#x884C;&#x5DE9;&#x56FA;&#xFF0C;&#x5E0C;&#x671B;&#x5927;&#x5BB6;&#x901A;&#x8FC7;&#x770B;&#x9762;&#x8BD5;&#x9898;&#x6765;&#x52A0;&#x6DF1;&#x81EA;&#x5DF1;&#x5BF9;&#x4E8E;iOS&#x77E5;&#x8BC6;&#x7684;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="&#x9762;&#x8BD5;&#x9898;&#xFF1A;"><a href="#&#x9762;&#x8BD5;&#x9898;&#xFF1A;" class="headerlink" title="&#x9762;&#x8BD5;&#x9898;&#xFF1A;"></a>&#x9762;&#x8BD5;&#x9898;&#xFF1A;</h2><h3 id="1-&#x4EC0;&#x4E48;&#x662F;arc&#xFF1F;&#xFF08;arc&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x8BDE;&#x751F;&#x7684;&#xFF1F;&#xFF09;"><a href="#1-&#x4EC0;&#x4E48;&#x662F;arc&#xFF1F;&#xFF08;arc&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x8BDE;&#x751F;&#x7684;&#xFF1F;&#xFF09;" class="headerlink" title="1. &#x4EC0;&#x4E48;&#x662F;arc&#xFF1F;&#xFF08;arc&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x8BDE;&#x751F;&#x7684;&#xFF1F;&#xFF09;"></a>1. &#x4EC0;&#x4E48;&#x662F;arc&#xFF1F;&#xFF08;arc&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x8BDE;&#x751F;&#x7684;&#xFF1F;&#xFF09;</h3><p>&#x9996;&#x5148;&#x89E3;&#x91CA;<code>ARC: automatic reference counting - &#x81EA;&#x52A8;&#x5F15;&#x7528;&#x8BA1;&#x6570;</code>&#x3002; </p>
+<p><strong>ARC&#x51E0;&#x4E2A;&#x8981;&#x70B9;&#xFF1A;</strong> </p>
+<ul>
+<li>&#x5728;&#x5BF9;&#x8C61;&#x88AB;&#x521B;&#x5EFA;&#x65F6; retain count +1&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x88AB;release&#x65F6; retain count -1.&#x5F53;retain count &#x4E3A;0 &#x65F6;&#xFF0C;&#x9500;&#x6BC1;&#x5BF9;&#x8C61;&#x3002; </li>
+<li>Xcode&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x81EA;&#x52A8;&#x52A0;&#x4E0A;autorelease&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x4E3A;0&#xFF0C;&#x5219;&#x9500;&#x6BC1;&#x3002; </li>
+</ul>
+<p><code>&#x90A3;&#x4E48;ARC&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x8BDE;&#x751F;&#x7684;&#x5462;&#xFF1F;</code>&#x8FD9;&#x4E2A;&#x5F97;&#x8FFD;&#x6EAF;&#x5230;MRC&#x624B;&#x52A8;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x65F6;&#x4EE3;&#x8BF4;&#x8D77;&#x3002; </p>
+<p><strong>MRC&#x4E0B;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7684;&#x7F3A;&#x70B9;&#xFF1A;</strong> </p>
+<ul>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x8981;&#x91CA;&#x653E;&#x4E00;&#x4E2A;&#x5806;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x786E;&#x5B9A;&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x5806;&#x7A7A;&#x95F4;&#x7684;&#x6307;&#x9488;&#x90FD;&#x88AB;release&#x4E86;&#x3002;&#xFF08;&#x907F;&#x514D;&#x63D0;&#x524D;&#x91CA;&#x653E;&#xFF09; </li>
+<li>&#x91CA;&#x653E;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5806;&#x7A7A;&#x95F4;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x6307;&#x9488;&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x5806;&#xFF0C;&#x8FD9;&#x4E9B;&#x6307;&#x9488;&#x53EA;&#x80FD;&#x91CA;&#x653E;&#x4E00;&#x6B21;&#x3002;&#xFF08;MRC&#x4E0B;&#x5373;&#x8C01;&#x521B;&#x5EFA;&#xFF0C;&#x8C01;&#x91CA;&#x653E;&#xFF0C;&#x907F;&#x514D;&#x91CD;&#x590D;&#x91CA;&#x653E;&#xFF09; </li>
+<li>&#x6A21;&#x5757;&#x5316;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5BF9;&#x8C61;&#x53EF;&#x80FD;&#x88AB;&#x591A;&#x4E2A;&#x6A21;&#x5757;&#x521B;&#x5EFA;&#x548C;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x786E;&#x5B9A;&#x6700;&#x540E;&#x7531;&#x8C01;&#x53BB;&#x91CA;&#x653E;&#x3002; </li>
+<li>&#x591A;&#x7EBF;&#x7A0B;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x4E0D;&#x786E;&#x5B9A;&#x54EA;&#x4E2A;&#x7EBF;&#x7A0B;&#x6700;&#x540E;&#x4F7F;&#x7528;&#x5B8C;&#x6BD5;</li>
+</ul>
+<p>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4E0A;&#x9762;MRC&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x5F15;&#x8FDB;&#x7684;ARC&#x3002;</p>
+<h3 id="2-void-load-void-initialize&#xFF1B;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;&#xFF1F;"><a href="#2-void-load-void-initialize&#xFF1B;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;&#xFF1F;" class="headerlink" title="2. +(void)load; +(void)initialize&#xFF1B;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;&#xFF1F;"></a>2. +(void)load; +(void)initialize&#xFF1B;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;&#xFF1F;</h3><p>&#x7B54;&#x6848;&#xFF1A;</p>
+<p>&#x5728;Objective-C&#x4E2D;&#xFF0C;<code>runtime&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;</code>&#x6BCF;&#x4E2A;&#x7C7B;&#x7684;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<ul>
+<li>+load&#x4F1A;&#x5728;&#x7C7B;&#x521D;&#x59CB;&#x52A0;&#x8F7D;&#x65F6;&#x8C03;&#x7528;</li>
+<li>initialize&#x4F1A;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7C7B;&#x7684;&#x7C7B;&#x65B9;&#x6CD5;&#x6216;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#x88AB;&#x8C03;&#x7528;</li>
+<li>&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;<code>&#x53EF;&#x9009;&#x7684;</code>&#xFF0C;&#x4E14;<code>&#x53EA;&#x6709;&#x5728;&#x5B9E;&#x73B0;&#x4E86;&#x5B83;&#x4EEC;&#x65F6;&#x624D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</code>&#x3002; </li>
+<li><code>&#x5171;&#x540C;&#x70B9;</code>&#xFF1A;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x53EA;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x3002;</li>
+</ul>
+<h3 id="3-&#x4E3A;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x91CC;&#x53EB;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;-objective-c&#x91CC;&#x5219;&#x662F;&#x7ED9;&#x5BF9;&#x8C61;&#x53D1;&#x6D88;&#x606F;&#xFF08;&#x6216;&#x8005;&#x8C08;&#x4E0B;&#x5BF9;runtime&#x7684;&#x7406;&#x89E3;&#xFF09;"><a href="#3-&#x4E3A;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x91CC;&#x53EB;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;-objective-c&#x91CC;&#x5219;&#x662F;&#x7ED9;&#x5BF9;&#x8C61;&#x53D1;&#x6D88;&#x606F;&#xFF08;&#x6216;&#x8005;&#x8C08;&#x4E0B;&#x5BF9;runtime&#x7684;&#x7406;&#x89E3;&#xFF09;" class="headerlink" title="3. &#x4E3A;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x91CC;&#x53EB;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C; objective c&#x91CC;&#x5219;&#x662F;&#x7ED9;&#x5BF9;&#x8C61;&#x53D1;&#x6D88;&#x606F;&#xFF08;&#x6216;&#x8005;&#x8C08;&#x4E0B;&#x5BF9;runtime&#x7684;&#x7406;&#x89E3;&#xFF09;"></a>3. &#x4E3A;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x91CC;&#x53EB;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C; objective c&#x91CC;&#x5219;&#x662F;&#x7ED9;&#x5BF9;&#x8C61;&#x53D1;&#x6D88;&#x606F;&#xFF08;&#x6216;&#x8005;&#x8C08;&#x4E0B;&#x5BF9;runtime&#x7684;&#x7406;&#x89E3;&#xFF09;</h3><p>&#x7B54;&#x6848;&#xFF1A;<br><strong>&#x5148;&#x6765;&#x770B;&#x770B;&#x600E;&#x4E48;&#x7406;&#x89E3;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x542B;&#x4E49;&#xFF1A;</strong><br>&#x200B;    &#x5F88;&#x591A;&#x4EBA;&#x5728;&#x4F7F;&#x7528;Objective-C &#x65F6;&#x628A;[receiver message]&#x8FD9;&#x6837;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5F53;&#x6210;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;receiver &#x8C03;&#x7528;&#x4E86;message&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;[receiver message]&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x5668;&#x8F6C;&#x5316;&#x4E3A;&#xFF1A; </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">objc_msgSend(receiver, selector)</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x6D88;&#x606F;&#x542B;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x4E3A;&#xFF1A; </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">objc_msgSend(receiver, selector, arg1, arg2, ...)</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x6D88;&#x606F;&#x7684;&#x63A5;&#x6536;&#x8005;&#x80FD;&#x591F;<code>&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;selector</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x76F4;&#x63A5;<code>&#x6267;&#x884C;</code>&#x4E86;&#x63A5;&#x6536;&#x8005;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x7279;&#x5B9A;&#x65B9;&#x6CD5;&#xFF1B;<br>&#x5426;&#x5219;&#xFF0C;&#x6D88;&#x606F;&#x8981;&#x4E48;&#x88AB;<code>&#x8F6C;&#x53D1;</code>&#xFF0C;<br>&#x6216;&#x662F;&#x4E34;&#x65F6;&#x5411;&#x63A5;&#x6536;&#x8005;<code>&#x52A8;&#x6001;&#x6DFB;&#x52A0;</code>&#x8FD9;&#x4E2A;selector&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#x5185;&#x5BB9;&#xFF0C;<br>&#x8981;&#x4E48;&#x5C31;&#x5E72;&#x8106;&#x73A9;&#x5B8C;<code>&#x5D29;&#x6E83;</code>&#x6389;&#x3002;</p>
+<p>&#x200B;    &#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x770B;&#x51FA;[receiver message]&#x771F;&#x7684;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x7B80;&#x5355;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;<code>&#x53EA;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x786E;&#x5B9A;&#x4E86;&#x8981;&#x5411;&#x63A5;&#x6536;&#x8005;&#x53D1;&#x9001;message&#x8FD9;&#x6761;&#x6D88;&#x606F;</code>&#xFF0C;&#x800C;receive&#x5C06;&#x8981;&#x5982;&#x4F55;&#x54CD;&#x5E94;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x5C31;&#x8981;&#x770B;&#x8FD0;&#x884C;&#x65F6;&#x53D1;&#x751F;&#x7684;&#x60C5;&#x51B5;&#x6765;&#x51B3;&#x5B9A;&#x4E86;&#x3002;</p>
+<p><strong>&#x603B;&#x7ED3;&#xFF1A;</strong>Objc Runtime&#x4F7F;&#x5F97;C&#x5177;&#x6709;&#x4E86;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x80FD;&#x529B;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x521B;&#x5EFA;&#xFF0C;&#x68C0;&#x67E5;&#xFF0C;&#x4FEE;&#x6539;&#x7C7B;&#x3001;&#x5BF9;&#x8C61;&#x548C;&#x5B83;&#x4EEC;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;runtime&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;</p>
+<h3 id="4-CALayer-&#x548C;-UIView&#x7684;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;"><a href="#4-CALayer-&#x548C;-UIView&#x7684;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;" class="headerlink" title="4. CALayer &#x548C; UIView&#x7684;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;"></a>4. CALayer &#x548C; UIView&#x7684;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;</h3><p>&#x7B54;&#x6848;&#xFF1A;</p>
+<ol>
+<li><p>&#x9996;&#x5148;UIView&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#xFF0C;Layer&#x4E0D;&#x53EF;&#x4EE5;.</p>
+<p>UIKit&#x4F7F;&#x7528;UIResponder&#x4F5C;&#x4E3A;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#xFF0C;&#x6765;&#x54CD;&#x5E94;&#x7CFB;&#x7EDF;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x4E8B;&#x4EF6;&#x5E76;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p>UIApplication&#x3001;UIViewController&#x3001;UIView&#x3001;&#x548C;&#x6240;&#x6709;&#x4ECE;UIView&#x6D3E;&#x751F;&#x51FA;&#x6765;&#x7684;UIKit&#x7C7B;&#xFF08;&#x5305;&#x62EC;UIWindow&#xFF09;&#x90FD;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x5730;&#x7EE7;&#x627F;&#x81EA;UIResponder&#x7C7B;&#x3002;<br>&#x200B;</p>
+<p>&#x5728; UIResponder&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x5904;&#x7406;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#x548C;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7684;&#x63A5;&#x53E3;, &#x800C; CALayer&#x76F4;&#x63A5;&#x7EE7;&#x627F; NSObject&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x200B;</p>
+</li>
+<li><p>View&#x548C;CALayer&#x7684;Frame&#x6620;&#x5C04;&#x53CA;View&#x5982;&#x4F55;&#x521B;&#x5EFA;CALayer.<br>&#x4E00;&#x4E2A; Layer &#x7684; frame &#x662F;&#x7531;&#x5B83;&#x7684; anchorPoint,position,bounds,&#x548C; transform &#x5171;&#x540C;&#x51B3;&#x5B9A;&#x7684;&#xFF0C;&#x800C;&#x4E00;&#x4E2A; View &#x7684; frame &#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x8FD4;&#x56DE; Layer&#x7684; frame&#xFF0C;&#x540C;&#x6837; View &#x7684; center&#x548C; bounds &#x4E5F;&#x662F;&#x8FD4;&#x56DE; Layer &#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x3002;<br>&#x200B;</p>
+<p>&#x5728; [view initWithFrame] &#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#x3010;UIView _createLayerWithFrame&#x3011;&#x53BB;&#x521B;&#x5EFA; CALayer&#x3002;<br>&#x7136;&#x540E;&#x6211;&#x5728;&#x521B;&#x5EFA; View &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728; Layer &#x548C; View &#x4E2D;Frame &#x76F8;&#x5173;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x4E2D;&#x90FD;&#x52A0;&#x4E0A;&#x65AD;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#x7684;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x5982;&#x4E0B;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[UIView _createLayerWithFrame]</div><div class="line">[Layer setBounds:bounds]</div><div class="line">[UIView setFrame&#xFF1A;Frame]</div><div class="line">[Layer setFrame:frame]</div><div class="line">[Layer setPosition:position]</div><div class="line">[Layer setBounds:bounds]</div></pre></td></tr></table></figure>
+<p>&#x6211;&#x53D1;&#x73B0;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x8FC7;&#x7A0B;&#x53EA;&#x6709;&#x8C03;&#x7528;&#x4E86; Layer &#x7684;&#x8BBE;&#x7F6E;&#x5C3A;&#x5BF8;&#x548C;&#x4F4D;&#x7F6E;&#x7684;&#x7136;&#x800C;&#x5E76;&#x6CA1;&#x6709;&#x8C03;&#x7528;View &#x7684; SetCenter &#x548C; SetBounds &#x65B9;&#x6CD5;&#x3002;<br>&#x200B;</p>
+<p>&#x7136;&#x540E;&#x6211;&#x53D1;&#x73B0;&#x5F53;&#x6211;&#x4FEE;&#x6539;&#x4E86; view&#x7684; bounds.size &#x6216;&#x8005; bounds.origin &#x7684;&#x65F6;&#x5019;&#x4E5F;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x4E0A;&#x8FB9; Layer&#x7684;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x200B;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x8BA4;&#x4E3A;&#xFF0C;View &#x7684; Center &#x548C; Bounds &#x53EA;&#x662F;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;layer &#x5BF9;&#x5E94;&#x7684; Position &#x548C; Bounds.</p>
+<p>&#x200B;</p>
+</li>
+<li><p>UIView&#x4E3B;&#x8981;&#x662F;&#x5BF9;&#x663E;&#x793A;&#x5185;&#x5BB9;&#x7684;&#x7BA1;&#x7406;&#x800C; CALayer &#x4E3B;&#x8981;&#x4FA7;&#x91CD;&#x663E;&#x793A;&#x5185;&#x5BB9;&#x7684;&#x7ED8;&#x5236;&#x3002;</p>
+</li>
+</ol>
+<ol>
+<li><p>&#x5728;&#x505A; iOS &#x52A8;&#x753B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4FEE;&#x6539;&#x975E; RootLayer&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x8B6C;&#x5982;&#x4F4D;&#x7F6E;&#x3001;&#x80CC;&#x666F;&#x8272;&#x7B49;&#xFF09;&#x4F1A;&#x9ED8;&#x8BA4;&#x4EA7;&#x751F;&#x9690;&#x5F0F;&#x52A8;&#x753B;&#xFF0C;&#x800C;&#x4FEE;&#x6539;UIView&#x5219;&#x4E0D;&#x4F1A;&#x3002;</p>
+<p>&#x200B;</p>
+<p>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A; UIView &#x90FD;&#x6709;&#x4E00;&#x4E2A; layer,&#x628A;&#x8FD9;&#x4E2A; layer &#x4E14;&#x79F0;&#x4F5C;RootLayer,&#x800C;&#x4E0D;&#x662F; View &#x7684;&#x6839; Layer&#x7684;&#x53EB;&#x505A; &#x975E; RootLayer&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5BF9;UIView&#x7684;&#x5C5E;&#x6027;&#x4FEE;&#x6539;&#x65F6;&#x65F6;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x9ED8;&#x8BA4;&#x52A8;&#x753B;&#xFF0C;&#x800C;&#x5BF9;&#x5355;&#x72EC; layer&#x5C5E;&#x6027;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x4F1A;&#xFF0C;&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x52A8;&#x753B;&#x7684;&#x65F6;&#x95F4;&#x7F3A;&#x7701;&#x503C;&#x662F;0.25s.<br>&#x200B;</p>
+<p>&#x5728; Core Animation &#x7F16;&#x7A0B;&#x6307;&#x5357;&#x7684; &#x201C;How to Animate Layer-Backed Views&#x201D; &#x4E2D;&#xFF0C;&#x5BF9;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x8FD9;&#x6837;&#x505A;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x89E3;&#x91CA;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UIView &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x7981;&#x6B62;&#x4E86; layer &#x52A8;&#x753B;&#xFF0C;&#x4F46;&#x662F;&#x5728; animation block &#x4E2D;&#x53C8;&#x91CD;&#x65B0;&#x542F;&#x7528;&#x4E86;&#x5B83;&#x4EEC;</div></pre></td></tr></table></figure>
+<p>&#x662F;&#x56E0;&#x4E3A;&#x4EFB;&#x4F55;&#x53EF;&#x52A8;&#x753B;&#x7684; layer &#x5C5E;&#x6027;&#x6539;&#x53D8;&#x65F6;&#xFF0C;layer &#x90FD;&#x4F1A;&#x5BFB;&#x627E;&#x5E76;&#x8FD0;&#x884C;&#x5408;&#x9002;&#x7684; &#x2018;action&#x2019; &#x6765;&#x5B9E;&#x884C;&#x8FD9;&#x4E2A;&#x6539;&#x53D8;&#x3002;&#x5728; Core Animation &#x7684;&#x4E13;&#x4E1A;&#x672F;&#x8BED;&#x4E2D;&#x5C31;&#x628A;&#x8FD9;&#x6837;&#x7684;&#x52A8;&#x753B;&#x7EDF;&#x79F0;&#x4E3A;&#x52A8;&#x4F5C; (action&#xFF0C;&#x6216;&#x8005; CAAction)&#x3002;<br>&#x200B;</p>
+<p>layer &#x901A;&#x8FC7;&#x5411;&#x5B83;&#x7684; delegate &#x53D1;&#x9001; actionForLayer:forKey: &#x6D88;&#x606F;&#x6765;&#x8BE2;&#x95EE;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x7684; action&#x3002;</p>
+<p>delegate &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD4;&#x56DE;&#x4EE5;&#x4E0B;&#x4E09;&#x8005;&#x4E4B;&#x4E00;&#x6765;&#x8FDB;&#x884C;&#x54CD;&#x5E94;&#xFF1A;</p>
+<ul>
+<li>&#x5B83;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B; layer &#x5C06;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x3002;</li>
+<li>&#x5B83;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; nil&#xFF0C; &#x8FD9;&#x6837; layer &#x5C31;&#x4F1A;&#x5230;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x3002;</li>
+<li>&#x5B83;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; NSNull &#x5BF9;&#x8C61;&#xFF0C;&#x544A;&#x8BC9; layer &#x8FD9;&#x91CC;&#x4E0D;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#xFF0C;&#x641C;&#x7D22;&#x4E5F;&#x4F1A;&#x5C31;&#x6B64;&#x505C;&#x6B62;&#x3002;</li>
+</ul>
+<p>&#x5F53; layer &#x5728;&#x80CC;&#x540E;&#x652F;&#x6301;&#x4E00;&#x4E2A; view &#x7684;&#x65F6;&#x5019;&#xFF0C;view &#x5C31;&#x662F;&#x5B83;&#x7684; delegate&#xFF1B;</p>
+</li>
+</ol>
+<hr>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x5C5E;&#x4E8E;&#x7814;&#x7A76;&#x578B;&#x7684;&#x7B54;&#x6848;&#xFF0C;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x5206;&#x6790;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x679C;&#x9762;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;&#x7B54;&#x6848;&#x6765;&#x56DE;&#x7B54;&#xFF1A;</p>
+<ol>
+<li><p>UIView&#x662F;iOS&#x7CFB;&#x7EDF;&#x4E2D;&#x754C;&#x9762;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x754C;&#x9762;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x7EE7;&#x627F;&#x81EA;&#x5B83;&#x3002;&#x5B83;&#x672C;&#x8EAB;&#x5B8C;&#x5168;&#x662F;&#x7531;CoreAnimation&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>&#x5B83;&#x771F;&#x6B63;&#x7684;&#x7ED8;&#x56FE;&#x90E8;&#x5206;&#xFF0C;&#x662F;&#x7531;&#x4E00;&#x4E2A;CALayer&#x7C7B;&#x6765;&#x7BA1;&#x7406;&#x3002;</p>
+<p>UIView&#x672C;&#x8EAB;&#x66F4;&#x50CF;&#x662F;&#x4E00;&#x4E2A;CALayer&#x7684;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x8BBF;&#x95EE;&#x5B83;&#x7684;&#x8DDF;&#x7ED8;&#x56FE;&#x548C;&#x8DDF;&#x5750;&#x6807;&#x6709;&#x5173;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4F8B;&#x5982;frame&#xFF0C;bounds&#x7B49;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5185;&#x90E8;&#x90FD;&#x662F;&#x5728;&#x8BBF;&#x95EE;&#x5B83;&#x6240;&#x5305;&#x542B;&#x7684;CALayer&#x7684;&#x76F8;&#x5173;&#x5C5E;&#x6027;&#x3002;</p>
+</li>
+<li><p>UIView&#x6709;&#x4E2A;&#x91CD;&#x8981;&#x5C5E;&#x6027;layer&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x4E3B;CALayer&#x5B9E;&#x4F8B;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// &#x8981;&#x8BBF;&#x95EE;&#x5C42;&#xFF0C;&#x8BFB;&#x53D6;UIView&#x5B9E;&#x4F8B;&#x7684;layer&#x5C5E;&#x6027;</div><div class="line">CALayer *layer = myView.layer</div></pre></td></tr></table></figure>
+<p>&#x6240;&#x6709;&#x4ECE;UIView&#x7EE7;&#x627F;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x7EE7;&#x627F;&#x4E86;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x3001;&#x7F29;&#x653E;&#x3001;&#x65CB;&#x8F6C;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5728;Navigation bars&#xFF0C;Tables&#xFF0C;Text boxes&#x7B49;&#x5176;&#x5B83;&#x7684;View&#x7C7B;&#x4E0A;&#x589E;&#x52A0;&#x52A8;&#x753B;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;UIView&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5C42;&#xFF0C;&#x63A7;&#x5236;&#x7740;&#x5404;&#x81EA;&#x7684;&#x5185;&#x5BB9;&#x6700;&#x7EC8;&#x88AB;&#x663E;&#x793A;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x65B9;&#x5F0F;&#x3002;<br>&#x200B;</p>
+<p>UIView&#x7684;layerClass&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E3B;layer&#x6240;&#x4F7F;&#x7528;&#x7684;&#x7C7B;&#xFF0C;UIView&#x7684;&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x91CD;&#x8F7D;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x8BA9;UIView&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;CALayer&#x6765;&#x663E;&#x793A;&#x3002;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- (class)layerClass {</div><div class="line"> return ([CAEAGLLayer class]);</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4F7F;&#x5F97;&#x67D0;&#x4E2A;UIView&#x7684;&#x5B50;&#x7C7B;&#x4F7F;&#x7528;GL&#x6765;&#x8FDB;&#x884C;&#x7ED8;&#x5236;&#x3002;</p>
+</li>
+<li><p>UIView&#x7684;CALayer&#x7C7B;&#x4F3C;UIView&#x7684;&#x5B50;View&#x6811;&#x5F62;&#x7ED3;&#x6784;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5411;&#x5B83;&#x7684;layer&#x4E0A;&#x6DFB;&#x52A0;&#x5B50;layer&#xFF0C;&#x6765;&#x5B8C;&#x6210;&#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x8868;&#x793A;&#x3002;</p>
+<p>&#x5373;CALayer&#x5C42;&#x662F;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x7684;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">grayCover = [[CALayer alloc] init];</div><div class="line">grayCover.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2] CGColor];</div><div class="line">[self.layer addSubLayer:grayCover];</div></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4F1A;&#x5728;&#x76EE;&#x6807;View&#x4E0A;&#x6577;&#x4E0A;&#x4E00;&#x5C42;&#x9ED1;&#x8272;&#x900F;&#x660E;&#x8584;&#x819C;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+</li>
+<li><p>UIView&#x7684;layer&#x6811;&#x5F62;&#x5728;&#x7CFB;&#x7EDF;&#x5185;&#x90E8;&#xFF0C;&#x88AB;&#x7EF4;&#x62A4;&#x7740;&#x4E09;&#x4EFD;copy&#x3002;</p>
+<ul>
+<li>&#x5206;&#x522B;&#x662F;&#x903B;&#x8F91;&#x6811;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x64CD;&#x7EB5;&#x7684;&#xFF1B;</li>
+<li>&#x52A8;&#x753B;&#x6811;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x5C42;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C31;&#x5728;&#x8FD9;&#x4E00;&#x5C42;&#x4E0A;&#x66F4;&#x6539;&#x5C5E;&#x6027;&#xFF0C;&#x8FDB;&#x884C;&#x5404;&#x79CD;&#x6E32;&#x67D3;&#x64CD;&#x4F5C;&#xFF1B;</li>
+<li>&#x663E;&#x793A;&#x6811;&#xFF0C;&#x5176;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x6B63;&#x88AB;&#x663E;&#x793A;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x5F97;&#x5185;&#x5BB9;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x52A8;&#x753B;&#x7684;&#x8FD0;&#x4F5C;&#xFF1A;&#x5BF9;UIView&#x7684;subLayer&#xFF08;&#x975E;&#x4E3B;Layer&#xFF09;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x66F4;&#x6539;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x52A8;&#x753B;&#x751F;&#x6210;&#xFF0C;&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x7684;&#x7F3A;&#x7701;&#x503C;&#x662F;0.25&#x79D2;&#x3002;</p>
+</li>
+<li><p>&#x5750;&#x6807;&#x7CFB;&#x7EDF;&#xFF1A;CALayer&#x7684;&#x5750;&#x6807;&#x7CFB;&#x7EDF;&#x6BD4;UIView&#x591A;&#x4E86;&#x4E00;&#x4E2A;anchorPoint&#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7528;CGPoint&#x7ED3;&#x6784;&#x8868;&#x793A;&#xFF0C;&#x503C;&#x57DF;&#x662F;0~1&#xFF0C;&#x662F;&#x4E2A;&#x6BD4;&#x4F8B;&#x503C;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x70B9;&#x662F;&#x5404;&#x79CD;&#x56FE;&#x5F62;&#x53D8;&#x6362;&#x7684;&#x5750;&#x6807;&#x539F;&#x70B9;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x66F4;&#x6539;layer&#x7684;position&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5B83;&#x7684;&#x7F3A;&#x7701;&#x503C;&#x662F;{0.5,0.5}&#xFF0C;&#x5373;&#x5728;layer&#x7684;&#x4E2D;&#x592E;&#x3002;</p>
+<p>layer&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>&#x5706;&#x89D2;&#x663E;&#x793A;</code>&#xFF08;cornerRadius&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>&#x9634;&#x5F71;</code>(shadowColor)&#x3002;<br>&#x4F46;&#x662F;&#x5982;&#x679C;layer&#x6811;&#x4E2D;&#x67D0;&#x4E2A;layer&#x8BBE;&#x7F6E;&#x4E86;&#x5706;&#x89D2;&#xFF0C;&#x6811;&#x79CD;&#x6240;&#x6709;layer&#x7684;&#x9634;&#x5F71;&#x6548;&#x679C;&#x90FD;&#x5C06;&#x4E0D;&#x663E;&#x793A;&#x4E86;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x82E5;&#x662F;&#x8981;&#x6709;&#x5706;&#x89D2;&#x53C8;&#x8981;&#x9634;&#x5F71;&#xFF0C;&#x53D8;&#x901A;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x505A;&#x4E24;&#x4E2A;&#x91CD;&#x53E0;&#x7684;UIView&#xFF0C;&#x4E00;&#x4E2A;&#x7684;layer&#x663E;&#x793A;&#x5706;&#x89D2;&#xFF0C;&#x4E00;&#x4E2A;layer&#x663E;&#x793A;&#x9634;&#x5F71;&#x2026;&#x2026;</p>
+</li>
+<li><p>&#x6E32;&#x67D3;&#xFF1A;&#x5F53;&#x66F4;&#x65B0;&#x5C42;&#xFF0C;&#x6539;&#x53D8;&#x4E0D;&#x80FD;&#x7ACB;&#x5373;&#x663E;&#x793A;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;&#x5F53;&#x6240;&#x6709;&#x7684;&#x5C42;&#x90FD;&#x51C6;&#x5907;&#x597D;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528;setNeedsDisplay&#x65B9;&#x6CD5;&#x6765;&#x91CD;&#x7ED8;&#x663E;&#x793A;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[gameLayer setNeedsDisplay];</div></pre></td></tr></table></figure>
+<p>&#x82E5;&#x8981;&#x91CD;&#x7ED8;&#x90E8;&#x5206;&#x5C4F;&#x5E55;&#x533A;&#x57DF;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>setNeedsDisplayInRect:</code>&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;&#x5728;CGRect&#x7ED3;&#x6784;&#x7684;&#x533A;&#x57DF;&#x66F4;&#x65B0;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[gameLayer setNeedsDisplayInRect:CGRectMake(150.0,100.0,50.0,75.0)];</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x662F;&#x7528;&#x7684;Core Graphics&#x6846;&#x67B6;&#x6765;&#x6267;&#x884C;&#x6E32;&#x67D3;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6E32;&#x67D3;Core Graphics&#x7684;&#x5185;&#x5BB9;&#x3002;&#x7528;renderInContext:&#x6765;&#x505A;&#x8FD9;&#x4E2A;&#x4E8B;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[gameLayer renderInContext:UIGraphicsGetCurrentContext()];</div></pre></td></tr></table></figure>
+<p>&#x200B;</p>
+</li>
+<li><p>&#x53D8;&#x6362;&#xFF1A;&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x5C42;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;3D&#x6216;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x8BBE;&#x7F6E;&#x5C42;&#x7684;transform&#x6216;affineTransform&#x5C5E;&#x6027;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">characterView.layer.transform = CATransform3DMakeScale(-1.0,-1.0,1.0);</div><div class="line"></div><div class="line">CGAffineTransform transform = CGAffineTransformMakeRotation(45.0);</div><div class="line"></div><div class="line">backgroundView.layer.affineTransform = transform;</div></pre></td></tr></table></figure>
+<p>&#x200B;</p>
+</li>
+</ol>
+<h3 id="5-&#x5982;&#x4F55;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7ED9;UIImageView&#x52A0;&#x4E2A;&#x5706;&#x89D2;&#xFF1F;"><a href="#5-&#x5982;&#x4F55;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7ED9;UIImageView&#x52A0;&#x4E2A;&#x5706;&#x89D2;&#xFF1F;" class="headerlink" title="5. &#x5982;&#x4F55;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7ED9;UIImageView&#x52A0;&#x4E2A;&#x5706;&#x89D2;&#xFF1F;"></a>5. &#x5982;&#x4F55;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7ED9;UIImageView&#x52A0;&#x4E2A;&#x5706;&#x89D2;&#xFF1F;</h3><p>&#x7B54;&#x6848;&#xFF1A;<br>&#x200B;    &#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x7ED9; UIImageView &#x6216;&#x8005;&#x8BF4; UIKit &#x7684;&#x63A7;&#x4EF6;&#x6DFB;&#x52A0;&#x5706;&#x89D2;&#x90FD;&#x662F;&#x6539;&#x53D8; clipsToBounds &#x548C; layer.cornerRadius,<br>&#x200B;    &#x8FD9;&#x6837;&#x5927;&#x7EA6;&#x4E24;&#x884C;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;. &#x4F46;&#x662F;, &#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x5F3A;&#x5236; Core Animation &#x63D0;&#x524D;&#x6E32;&#x67D3;&#x5C4F;&#x5E55;&#x7684;&#x79BB;&#x5C4F;&#x7ED8;&#x5236;, &#x800C;<code>&#x79BB;&#x5C4F;&#x7ED8;&#x5236;&#x5C31;&#x4F1A;&#x4E3A;&#x6027;&#x80FD;&#x5E26;&#x6765;&#x8D1F;&#x9762;&#x5F71;&#x54CD;.</code></p>
+<p>&#x200B;    &#x4ECE;APP&#x6027;&#x80FD;&#x4F18;&#x5316;&#x89D2;&#x5EA6;&#x8003;&#x8651;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x79CD;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4E3A;&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x5706;&#x89D2;, &#x5C31;&#x662F;&#x901A;&#x8FC7;&#x753B;&#x5E03;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8FDB;&#x884C;&#x88C1;&#x526A;&#xFF0C;</p>
+<p><strong>&#x4F7F;&#x7528;Quartz2D&#x76F4;&#x63A5;&#x7ED8;&#x5236;&#x56FE;&#x7247;</strong></p>
+<p>&#x6B65;&#x9AA4;&#xFF1A;<br>&#x3000;&#x3000;a&#x3001;&#x521B;&#x5EFA;&#x76EE;&#x6807;&#x5927;&#x5C0F;(cropWidth&#xFF0C;cropHeight)&#x7684;&#x753B;&#x5E03;&#x3002;</p>
+<p>&#x3000;&#x3000;b&#x3001;&#x4F7F;&#x7528;UIImage&#x7684;drawInRect&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x7ED8;&#x5236;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6307;&#x5B9A;rect&#x4E3A;(-x&#xFF0C;-y&#xFF0C;width&#xFF0C;height)&#x3002;</p>
+<p>&#x3000;&#x3000;c&#x3001;&#x4ECE;&#x753B;&#x5E03;&#x4E2D;&#x5F97;&#x5230;&#x88C1;&#x526A;&#x540E;&#x7684;&#x56FE;&#x50CF;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">- (UIImage*)cropImageWithRect:(CGRect)cropRect</div><div class="line">{</div><div class="line">    CGRect drawRect = CGRectMake(-cropRect.origin.x , -cropRect.origin.y, self.size.width * self.scale, self.size.height * self.scale);</div><div class="line"></div><div class="line">    UIGraphicsBeginImageContext(cropRect.size);</div><div class="line">    CGContextRef context = UIGraphicsGetCurrentContext();</div><div class="line">    CGContextClearRect(context, CGRectMake(0, 0, cropRect.size.width, cropRect.size.height));</div><div class="line"></div><div class="line">    [self drawInRect:drawRect];</div><div class="line"></div><div class="line">    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();</div><div class="line">    UIGraphicsEndImageContext();</div><div class="line"></div><div class="line">    return image;</div><div class="line">}</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x91CC;&#x518D;&#x4ECB;&#x7ECD;&#x4E00;&#x79CD;&#x7528;<strong>&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x7684;&#x65B9;&#x5F0F;</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];</div><div class="line"></div><div class="line">	imageView.center = CGPointMake(200, 300);</div><div class="line"></div><div class="line">	UIImage *anotherImage = [UIImage imageNamed:@&quot;image&quot;];</div><div class="line"></div><div class="line">	UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);</div><div class="line"></div><div class="line">	[[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:50] addClip];</div><div class="line"></div><div class="line">	[anotherImage drawInRect:imageView.bounds];</div><div class="line"></div><div class="line">	imageView.image = UIGraphicsGetImageFromCurrentImageContext();</div><div class="line"></div><div class="line">	UIGraphicsEndImageContext();</div><div class="line"></div><div class="line">	[self.view addSubview:imageView];</div></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x4E24;&#x79CD;&#x90FD;&#x65B9;&#x5F0F;&#x90FD;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x9700;&#x6C42;&#x3002;</p>
+<h3 id="6-layoutSubviews-&#x548C;-drawRect&#x7684;&#x8C03;&#x7528;"><a href="#6-layoutSubviews-&#x548C;-drawRect&#x7684;&#x8C03;&#x7528;" class="headerlink" title="6.layoutSubviews &#x548C; drawRect&#x7684;&#x8C03;&#x7528;"></a>6.layoutSubviews &#x548C; drawRect&#x7684;&#x8C03;&#x7528;</h3><p>&#x7B54;&#x6848;&#xFF1A;</p>
+<p>&#x200B;    <strong>layoutSubviews&#x5728;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</strong>&#xFF1A;</p>
+<ol>
+<li>init&#x521D;&#x59CB;&#x5316;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;layoutSubviews&#x3002;</li>
+<li>addSubview&#x4F1A;&#x89E6;&#x53D1;layoutSubviews&#x3002;</li>
+<li>&#x8BBE;&#x7F6E;view&#x7684;Frame&#x4F1A;&#x89E6;&#x53D1;layoutSubviews&#xFF0C;&#x5F53;&#x7136;&#x524D;&#x63D0;&#x662F;frame&#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x524D;&#x540E;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x3002;</li>
+<li>&#x6EDA;&#x52A8;&#x4E00;&#x4E2A;UIScrollView&#x4F1A;&#x89E6;&#x53D1;layoutSubviews&#x3002;</li>
+<li>&#x65CB;&#x8F6C;Screen&#x4F1A;&#x89E6;&#x53D1;&#x7236;UIView&#x4E0A;&#x7684;layoutSubviews&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x6539;&#x53D8;&#x4E00;&#x4E2A;UIView&#x5927;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4F1A;&#x89E6;&#x53D1;&#x7236;UIView&#x4E0A;&#x7684;layoutSubviews&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x76F4;&#x63A5;&#x8C03;&#x7528;setLayoutSubviews&#x3002;</li>
+</ol>
+<p>&#x200B;    <strong>drawRect&#x5728;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF1A;</strong></p>
+<ol>
+<li>&#x5982;&#x679C;&#x5728;UIView&#x521D;&#x59CB;&#x5316;&#x65F6;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;rect&#x5927;&#x5C0F;&#xFF0C;&#x5C06;&#x76F4;&#x63A5;&#x5BFC;&#x81F4;drawRect&#x4E0D;&#x88AB;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x3002;drawRect &#x6389;&#x7528;&#x662F;&#x5728;Controller-&gt;loadView,?Controller-&gt;viewDidLoad?&#x4E24;&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x6389;&#x7528;&#x7684;.&#x6240;&#x4EE5;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x5728; &#x63A7;&#x5236;&#x5668;&#x4E2D;,&#x8FD9;&#x4E9B;View&#x7684;drawRect&#x5C31;&#x5F00;&#x59CB;&#x753B;&#x4E86;.&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E9B;&#x503C;&#x7ED9;View(&#x5982;&#x679C;&#x8FD9;&#x4E9B;View?draw&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x7528;&#x5230;&#x67D0;&#x4E9B;&#x53D8;&#x91CF;&#x503C;).</li>
+<li>&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x8C03;&#x7528;sizeToFit&#x540E;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5148;&#x8C03;&#x7528;sizeToFit&#x8BA1;&#x7B97;&#x51FA;size&#x3002;&#x7136;&#x540E;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x8C03;&#x7528;drawRect:&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;contentMode&#x5C5E;&#x6027;&#x503C;&#x4E3A;UIViewContentModeRedraw&#x3002;&#x90A3;&#x4E48;&#x5C06;&#x5728;&#x6BCF;&#x6B21;&#x8BBE;&#x7F6E;&#x6216;&#x66F4;&#x6539;frame&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x8C03;&#x7528;drawRect:&#x3002;</li>
+<li>&#x76F4;&#x63A5;&#x8C03;&#x7528;setNeedsDisplay&#xFF0C;&#x6216;&#x8005;setNeedsDisplayInRect:&#x89E6;&#x53D1;drawRect:&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E2A;&#x524D;&#x63D0;&#x6761;&#x4EF6;&#x662F;rect&#x4E0D;&#x80FD;&#x4E3A;0&#x3002;</li>
+</ol>
+<p>&#x4EE5;&#x4E0A;1,2&#x63A8;&#x8350;&#xFF1B;&#x800C;3,4&#x4E0D;&#x63D0;&#x5021;</p>
+<p>&#x200B;    <strong>drawRect&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</strong></p>
+<ol>
+<li>&#x82E5;&#x4F7F;&#x7528;UIView&#x7ED8;&#x56FE;&#xFF0C;&#x53EA;&#x80FD;&#x5728;drawRect&#xFF1A;&#x65B9;&#x6CD5;&#x4E2D;&#x83B7;&#x53D6;&#x76F8;&#x5E94;&#x7684;contextRef&#x5E76;&#x7ED8;&#x56FE;&#x3002;&#x5982;&#x679C;&#x5728;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x4E2D;&#x83B7;&#x53D6;&#x5C06;&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x4E2A;invalidate &#x7684;ref&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x753B;&#x56FE;&#x3002;drawRect&#xFF1A;&#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x624B;&#x52A8;&#x663E;&#x793A;&#x8C03;&#x7528;&#xFF0C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x8C03;&#x7528;setNeedsDisplay?&#x6216; &#x8005;?setNeedsDisplayInRect&#xFF0C;&#x8BA9;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x8C03;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x82E5;&#x4F7F;&#x7528;CALayer&#x7ED8;&#x56FE;&#xFF0C;&#x53EA;&#x80FD;&#x5728;drawInContext:?&#x4E2D;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;drawRect&#xFF09;&#x7ED8;&#x5236;&#xFF0C;&#x6216;&#x8005;&#x5728;delegate&#x4E2D;&#x7684;&#x76F8;&#x5E94;&#x65B9;&#x6CD5;&#x7ED8;&#x5236;&#x3002;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x8C03;&#x7528;setNeedDisplay&#x7B49;&#x95F4;&#x63A5;&#x8C03;&#x7528;&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;</li>
+<li>&#x82E5;&#x8981;&#x5B9E;&#x65F6;&#x753B;&#x56FE;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;gestureRecognizer&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;touchbegan&#x7B49;&#x65B9;&#x6CD5;&#x6765;&#x8C03;&#x7528;setNeedsDisplay&#x5B9E;&#x65F6;&#x5237;&#x65B0;&#x5C4F;&#x5E55;</li>
+</ol>
+<h3 id="7-post&#x548C;get&#x7684;&#x533A;&#x522B;&#xFF1F;"><a href="#7-post&#x548C;get&#x7684;&#x533A;&#x522B;&#xFF1F;" class="headerlink" title="7. post&#x548C;get&#x7684;&#x533A;&#x522B;&#xFF1F;"></a>7. post&#x548C;get&#x7684;&#x533A;&#x522B;&#xFF1F;</h3><p>&#x7B54;&#x6848;&#xFF1A;</p>
+<ol>
+<li>get&#x662F;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;post&#x662F;&#x5411;&#x670D;&#x52A1;&#x5668;&#x4F20;&#x9001;&#x6570;&#x636E;&#x3002;</li>
+<li>get&#x662F;&#x628A;&#x53C2;&#x6570;&#x6570;&#x636E;&#x961F;&#x5217;&#x52A0;&#x5230;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x7684;ACTION&#x5C5E;&#x6027;&#x6240;&#x6307;&#x7684;URL&#x4E2D;&#xFF0C;&#x503C;&#x548C;&#x8868;&#x5355;&#x5185;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#xFF0C;&#x5728;URL&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x3002;post&#x662F;&#x901A;&#x8FC7;HTTP post&#x673A;&#x5236;&#xFF0C;&#x5C06;&#x8868;&#x5355;&#x5185;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x4E0E;&#x5176;&#x5185;&#x5BB9;&#x653E;&#x7F6E;&#x5728;HTML HEADER&#x5185;&#x4E00;&#x8D77;&#x4F20;&#x9001;&#x5230;ACTION&#x5C5E;&#x6027;&#x6240;&#x6307;&#x7684;URL&#x5730;&#x5740;&#x3002;&#x7528;&#x6237;&#x770B;&#x4E0D;&#x5230;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;get&#x65B9;&#x5F0F;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7528;Request.QueryString&#x83B7;&#x53D6;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x5BF9;&#x4E8E;post&#x65B9;&#x5F0F;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7528;Request.Form&#x83B7;&#x53D6;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>get&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#x91CF;&#x8F83;&#x5C0F;&#xFF0C;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;2KB&#x3002;post&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#x91CF;&#x8F83;&#x5927;&#xFF0C;&#x4E00;&#x822C;&#x88AB;&#x9ED8;&#x8BA4;&#x4E3A;&#x4E0D;&#x53D7;&#x9650;&#x5236;&#x3002;&#x4F46;&#x7406;&#x8BBA;&#x4E0A;&#xFF0C;IIS4&#x4E2D;&#x6700;&#x5927;&#x91CF;&#x4E3A;80KB&#xFF0C;IIS5&#x4E2D;&#x4E3A;100KB&#x3002;</li>
+<li>get&#x5B89;&#x5168;&#x6027;&#x975E;&#x5E38;&#x4F4E;&#xFF0C;post&#x5B89;&#x5168;&#x6027;&#x8F83;&#x9AD8;&#x3002;&#x4F46;&#x662F;&#x6267;&#x884C;&#x6548;&#x7387;&#x5374;&#x6BD4;Post&#x65B9;&#x6CD5;&#x597D;&#x3002; </li>
+</ol>
+<hr>
+<p>&#x672C;&#x4F5C;&#x54C1;&#x91C7;&#x7528; <code>&#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 2.5 &#x4E2D;&#x56FD;&#x5927;&#x9646; (CC BY-NC-SA 2.5)&#x534F;&#x8BAE;</code> &#x8FDB;&#x884C;&#x8BB8;&#x53EF;&#xFF0C;&#x6B22;&#x8FCE;&#x8F6C;&#x8F7D;&#xFF0C;&#x4F46;&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x6765;&#x81EA;<code>SarielTang</code>&#xFF0C;&#x5E76;&#x4FDD;&#x6301;&#x8F6C;&#x8F7D;&#x540E;&#x6587;&#x7AE0;&#x5185;&#x5BB9;&#x7684;&#x5B8C;&#x6574;&#x3002;&#x672C;&#x4EBA;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x7248;&#x6743;&#x76F8;&#x5173;&#x6743;&#x5229;&#x3002;</p>
+<p>&#x672C;&#x6587;&#x6C38;&#x4E45;&#x94FE;&#x63A5;&#xFF1A;<a href="http://sarieltang.github.io/2016/10/27/&#x9762;&#x8BD5;&#x9898;&#x603B;&#x7ED3;/2016-10-27/index/">http://sarieltang.github.io/2016/10/27/&#x9762;&#x8BD5;&#x9898;&#x603B;&#x7ED3;/2016-10-27/index/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sarieltang.github.io/2016/10/27/面试题总结/2016-10-27/index/" data-id="cius49ays0017cjfyoknr9lqb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/27/转/2016-10-27/index/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          iOS动画——ViewAnimations
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">首页</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结分析/">总结分析</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/知识点小结/">知识点小结</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转/">转</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题总结/">面试题总结</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/27/转/2016-10-27/index/">iOS动画——ViewAnimations</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/27/面试题总结/2016-10-27/index/">iOS面试题整理分析</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/hello-world/">首页</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/25/总结分析/2016-10-25/index/">Method Swizzling（方法替换）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/19/知识点小结/2016-05-19/index/">系统返回手势与ScrollView的冲突</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 SarielTang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
