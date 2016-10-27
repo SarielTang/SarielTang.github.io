@@ -111,10 +111,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer  </div><div class="line"></div><div class="line">{  </div><div class="line">	// &#x9996;&#x5148;&#x5224;&#x65AD;otherGestureRecognizer&#x662F;&#x4E0D;&#x662F;&#x7CFB;&#x7EDF;pop&#x624B;&#x52BF;  </div><div class="line">	if ([otherGestureRecognizer.view isKindOfClass:NSClassFromString(@&quot;UILayoutContainerView&quot;)]) {  </div><div class="line">		// &#x518D;&#x5224;&#x65AD;&#x7CFB;&#x7EDF;&#x624B;&#x52BF;&#x7684;state&#x662F;began&#x8FD8;&#x662F;fail&#xFF0C;&#x540C;&#x65F6;&#x5224;&#x65AD;scrollView&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x4E0D;&#x662F;&#x6B63;&#x597D;&#x5728;&#x6700;&#x5DE6;&#x8FB9;  </div><div class="line">		if (otherGestureRecognizer.state == UIGestureRecognizerStateBegan </div><div class="line">            &amp;&amp; self.contentOffset.x == 0) {  </div><div class="line">			return YES;  </div><div class="line">    	}  </div><div class="line">	}  </div><div class="line">	return NO;  </div><div class="line">}</div></pre></td></tr></table></figure>
 
       
-      
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2016/05/19/知识点小结/2016-05-19/index/" data-id="ciurqtp600003alfyiwq8dtoi" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2016/05/19/知识点小结/2016-05-19/index/" data-id="ciurqw7kx0006b9fy3j8a1q9v" class="article-share-link">Share</a>
       
       
     </footer>
