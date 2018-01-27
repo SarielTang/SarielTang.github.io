@@ -65,6 +65,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-总结分析/2016-04-28/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/28/总结分析/2016-04-28/index/" class="article-date">
+  <time datetime="2016-04-28T14:32:00.000Z" itemprop="datePublished">2016-04-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/总结分析/">总结分析</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/28/总结分析/2016-04-28/index/">iOS性能调优总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##&#x5F15;&#x8A00;<br>&#x8BF4;&#x8D77;&#x6027;&#x80FD;&#x8C03;&#x4F18;&#xFF0C;&#x6211;&#x672C;&#x6765;&#x60F3;&#x8BF4;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x89C9;&#x5F97;&#x67AF;&#x71E5;&#x7684;&#x8BED;&#x8A00;&#x5E76;&#x4E0D;&#x80FD;&#x8868;&#x8FBE;&#x6211;&#x5BF9;&#x4E8E;&#x6027;&#x80FD;&#x8C03;&#x4F18;&#x7684;&#x91CD;&#x89C6;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x6253;&#x7B97;&#x4E3E;&#x4E2A;&#x4E0D;&#x592A;&#x6070;&#x5F53;&#x7684;&#x4F8B;&#x5B50;&#x3002;<br>&#x200B;<br>    &#x66FE;&#x7ECF;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x5BB6;&#x5DE5;&#x5382;&#xFF0C;&#x4ED6;&#x4EEC;&#x7684;&#x6BCF;&#x6761;&#x4EA7;&#x54C1;&#x7EBF;&#x9700;&#x8981;&#x7ECF;&#x8FC7;30&#x4E2A;&#x5DE5;&#x5E8F;&#x3002;<br>    &#x8FD9;&#x5BB6;&#x516C;&#x53F8;&#x7684;&#x8001;&#x677F;&#x5BF9;&#x5E95;&#x4E0B;&#x7684;&#x5458;&#x5DE5;&#x66FE;&#x591A;&#x6B21;&#x5F3A;&#x8C03;&#x8FC7;&#x8D28;&#x91CF;&#x7684;&#x91CD;&#x8981;&#x6027;&#xFF0C;&#x5458;&#x5DE5;&#x4EEC;&#x5374;&#x4E0D;&#x4EE5;&#x4E3A;&#x7136;&#xFF0C;&#x4ED6;&#x4EEC;&#x89C9;&#x5F97;&#x81EA;&#x5DF1;&#x505A;&#x7684;&#x90FD;&#x5F88;&#x4E0D;&#x9519;&#x3002;<br>    &#x6709;&#x4E00;&#x6B21;&#xFF0C;&#x8001;&#x677F;&#x53BB;&#x89C6;&#x5BDF;&#xFF0C;&#x8D70;&#x5230;&#x4E86;&#x4EA7;&#x54C1;&#x7EBF;&#x4E0A;&#x7684;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x95EE;&#x8D77;&#x5DE5;&#x4EBA;&#xFF0C;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x7684;&#x5408;&#x683C;&#x7387;&#x80FD;&#x8FBE;&#x5230;&#x591A;&#x5C11;&#xFF0C;&#x90A3;&#x4E2A;&#x5DE5;&#x4EBA;&#x81EA;&#x8C6A;&#x7684;&#x8BF4;&#xFF0C;&#x201D;98%!&#x201D;&#x3002;&#x8001;&#x677F;&#x5374;&#x5E76;&#x6CA1;&#x6709;&#x5341;&#x5206;&#x6EE1;&#x610F;&#xFF0C;&#x6447;&#x7740;&#x5934;&#x8D70;&#x5F00;&#x4E86;&#x3002;<br>    &#x90A3;&#x4F4D;&#x5DE5;&#x4EBA;&#x975E;&#x5E38;&#x7684;&#x7591;&#x60D1;&#x3002;&#x8FD9;&#x4E48;&#x9AD8;&#x7684;&#x5408;&#x683C;&#x7387;&#xFF0C;&#x8001;&#x677F;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x662F;&#x4E0D;&#x6EE1;&#x610F;&#x5462;&#xFF1F;<br>    &#x4E8E;&#x662F;&#x8FD9;&#x4F4D;&#x5DE5;&#x4EBA;&#x5C31;&#x53BB;&#x5411;&#x9886;&#x5BFC;&#x6253;&#x542C;&#xFF0C;&#x9886;&#x5BFC;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#xFF0C;&#x4E8E;&#x662F;&#x540E;&#x6765;&#x8FD9;&#x4F4D;&#x5DE5;&#x4EBA;&#x76F4;&#x63A5;&#x627E;&#x5230;&#x4E86;&#x8001;&#x677F;&#x5BB6;&#x91CC;&#xFF0C;&#x5411;&#x8001;&#x677F;&#x8BF7;&#x6559;&#x3002;<br>    &#x8001;&#x677F;&#x5F88;&#x662F;&#x8BE7;&#x5F02;&#xFF0C;&#x4E8E;&#x662F;&#x5C31;&#x7ED9;&#x8FD9;&#x4F4D;&#x5DE5;&#x4EBA;&#x7B80;&#x5355;&#x79D1;&#x666E;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x4E00;&#x6761;&#x4EA7;&#x54C1;&#x7EBF;&#x662F;&#x7531;30&#x4E2A;&#x5DE5;&#x5E8F;&#x7EC4;&#x5408;&#x800C;&#x6210;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x5DE5;&#x5E8F;&#x7684;&#x5408;&#x683C;&#x7387;&#x662F;98%&#xFF0C;&#x5E76;&#x4E0D;&#x4EE3;&#x8868;&#x6700;&#x540E;&#x603B;&#x7684;&#x5408;&#x683C;&#x7387;&#x662F;98%&#x3002;&#x5E94;&#x8BE5;&#x662F;&#x8FD9;&#x6837;&#x8BA1;&#x7B97;&#x6700;&#x540E;&#x7684;&#x5408;&#x683C;&#x7387;&#x7684;&#xFF1A;<br>$$x = 0.98<em>0.98</em>0.98&#x2026; = 0.98^{30} = 0.545$$<br>&#x6240;&#x4EE5;&#xFF0C;&#x8FD9;&#x6761;&#x4EA7;&#x54C1;&#x7EBF;&#x7684;&#x5408;&#x683C;&#x7387;&#x5B9E;&#x9645;&#x4E0A;&#x53EA;&#x6709;54.5%&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x6545;&#x4E8B;&#x8BF4;&#x660E;&#x7684;&#x95EE;&#x9898;&#x5176;&#x5B9E;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x53D1;&#x7684;app&#x7684;&#x6700;&#x7EC8;&#x6027;&#x80FD;&#xFF0C;&#x90FD;&#x662F;&#x7531;&#x6BCF;&#x4E00;&#x4E2A;&#x7EC6;&#x5C0F;&#x7684;&#x90E8;&#x5206;&#x7EC4;&#x5408;&#x800C;&#x6210;&#x7684;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x90E8;&#x5206;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x8FDB;&#x884C;&#x7684;&#x4E58;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x52A0;&#x51CF;&#xFF0C;&#x6240;&#x4EE5;&#x60F3;&#x8981;&#x81EA;&#x5DF1;&#x8BBE;&#x8BA1;&#x7684;app&#x8BA9;&#x7528;&#x6237;&#x7528;&#x7684;&#x723D;&#xFF0C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5C0F;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x6211;&#x4EEC;&#x90FD;&#x4E0D;&#x80FD;&#x5FFD;&#x7565;&#x3002;<br></p>
+        
+          <p class="article-more-link">
+            <a href="/2016/04/28/总结分析/2016-04-28/index/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sarieltang.github.io/2016/04/28/总结分析/2016-04-28/index/" data-id="cjcx2dzut0008ivs6cuumafxk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-总结分析/2015-12-25/index" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/25/总结分析/2015-12-25/index/" class="article-date">
@@ -101,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/12/25/总结分析/2015-12-25/index/" data-id="cj1acjiv20003fzs69de44qj1" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/12/25/总结分析/2015-12-25/index/" data-id="cjcx2dzuj0003ivs6v92zlkyf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/09/05/总结分析/2015-09-05/index/" data-id="cj1acjiv80006fzs64p56g2b9" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/09/05/总结分析/2015-09-05/index/" data-id="cjcx2dzut0007ivs6yboadu6n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/07/03/知识点小结/2015-07-03/index/" data-id="cj1acjivn000lfzs6n2sf5ht6" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/07/03/知识点小结/2015-07-03/index/" data-id="cjcx2dzv3000kivs6bfz6047f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/06/06/知识点小结/2015-06-06_1/index/" data-id="cj1acjivo000nfzs69j08e2gv" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/06/06/知识点小结/2015-06-06_1/index/" data-id="cjcx2dzva000vivs6mjcv9xao" class="article-share-link">Share</a>
       
       
     </footer>
@@ -284,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/06/06/知识点小结/2015-06-06/index/" data-id="cj1acjivk000hfzs6ditamuw1" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/06/06/知识点小结/2015-06-06/index/" data-id="cjcx2dzvb000zivs6km8pfklo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/05/21/知识点小结/2015-05-21/index/" data-id="cj1acjivi000ffzs69uv3l393" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/05/21/知识点小结/2015-05-21/index/" data-id="cjcx2dzv2000hivs6xzyjj10w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/04/27/知识点小结/2015-04-27/index/" data-id="cj1acjiva0008fzs6ptuj045s" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/04/27/知识点小结/2015-04-27/index/" data-id="cjcx2dzux000civs62g10i8ar" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +492,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2015/01/06/转/2015-01-06/index/" data-id="cj1acjivz000zfzs6b5xqzmiq" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2015/01/06/转/2015-01-06/index/" data-id="cjcx2dzve0015ivs6x5s14beo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -491,57 +537,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2014/12/27/知识点小结/2014-12-27/index/" data-id="cj1acjivd000afzs6op0k7yhu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-知识点小结/2014-12-23/index" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/23/知识点小结/2014-12-23/index/" class="article-date">
-  <time datetime="2014-12-23T06:30:00.000Z" itemprop="datePublished">2014-12-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/知识点小结/">知识点小结</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/23/知识点小结/2014-12-23/index/">sizeof操作的个人使用心得</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="&#x5F15;&#x8A00;"><a href="#&#x5F15;&#x8A00;" class="headerlink" title="&#x5F15;&#x8A00;"></a>&#x5F15;&#x8A00;</h2><pre><code> &#x8BF4;&#x8D77;sizeof&#xFF0C;&#x60F3;&#x6765;&#x5927;&#x5BB6;&#x90FD;&#x4E0D;&#x964C;&#x751F;&#xFF0C;&#x5979;&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x6570;&#x636E;&#x6240;&#x5360;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5B57;&#x8282;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#x3002;
-
-&#x4F46;&#x662F;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x521D;&#x5B66;&#x8005;&#xFF0C;&#x751A;&#x81F3;&#x6211;&#x7684;&#x540C;&#x4E8B;&#x4E2D;&#x4E00;&#x4E9B;&#x5DF2;&#x7ECF;&#x5F00;&#x53D1;&#x8FC7;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x7F16;&#x7A0B;&#x4EBA;&#x5458;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x4F7F;&#x7528;&#x90FD;&#x5B58;&#x5728;&#x4E0D;&#x5C11;&#x7406;&#x89E3;&#x4E0A;&#x7684;&#x5931;&#x8BEF;&#x3002;
-
-&#x4ECA;&#x5929;&#xFF0C;&#x6211;&#x5C31;&#x7B80;&#x5355;&#x5206;&#x4EAB;&#x4E00;&#x4E9B;&#x6211;&#x4E2A;&#x4EBA;&#x7684;&#x4F7F;&#x7528;&#x5FC3;&#x5F97;&#xFF0C;&#x4E0D;&#x662F;&#x4EC0;&#x4E48;&#x4E86;&#x4E0D;&#x8D77;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x6BD5;&#x7ADF;&#x672C;&#x4EBA;&#x4E5F;&#x53EA;&#x80FD;&#x7B97;&#x662F;&#x7F16;&#x7A0B;&#x754C;&#x7684;&#x83DC;&#x9E1F;&#x4E00;&#x679A;&#xFF0C;&#x4F46;&#x662F;&#x5E0C;&#x671B;&#x80FD;&#x5BF9;&#x521D;&#x5B66;&#x8005;&#x4EEC;&#x6709;&#x4E9B;&#x5E2E;&#x52A9;&#x3002;
-</code></pre>
-        
-          <p class="article-more-link">
-            <a href="/2014/12/23/知识点小结/2014-12-23/index/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sarieltang.github.io/2014/12/23/知识点小结/2014-12-23/index/" data-id="cj1acjive000cfzs6ignf9xpr" class="article-share-link">Share</a>
+      <a data-url="http://sarieltang.github.io/2014/12/27/知识点小结/2014-12-27/index/" data-id="cjcx2dzus0006ivs6ju5dvz2q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -554,7 +550,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -564,7 +560,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结分析/">总结分析</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/知识点小结/">知识点小结</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转/">转</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题总结/">面试题总结</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结分析/">总结分析</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/知识点小结/">知识点小结</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转/">转</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题总结/">面试题总结</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -579,7 +575,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2100/01/">一月 2100</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2100/01/">一月 2100</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a></li></ul>
     </div>
   </div>
 
@@ -596,6 +592,10 @@
           </li>
         
           <li>
+            <a href="/2018/01/23/总结分析/2018-01-23/index/">阶段性知识点总结</a>
+          </li>
+        
+          <li>
             <a href="/2017/04/09/知识点小结/2017-04-09/index/">iOS开发技巧小结</a>
           </li>
         
@@ -605,10 +605,6 @@
         
           <li>
             <a href="/2016/11/07/知识点小结/2016-11-07/index/">不修改设备旋转的情况下弹出横屏键盘</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/27/转/2016-10-27/index/">iOS动画——ViewAnimations</a>
           </li>
         
       </ul>
@@ -623,7 +619,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 SarielTang<br>
+      &copy; 2018 SarielTang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
